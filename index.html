@@ -1,129 +1,205 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itália 2027 - Guia de Viagem</title>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Itália 2027 | Roteiro de Viagem</title>
+    <link href="https://cdnjs.cloudflare.com" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-    </style>
-</head>
-<body class="bg-slate-50">
-    <div id="root"></div>
-
-    <script type="text/babel">
-        const { useState } = React;
-
-        // Ícones simples em SVG para evitar dependências externas pesadas
-        const IconCar = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>;
-        const IconMap = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>;
-        const IconAlert = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>;
-
-        function App() {
-            const [tab, setTab] = useState('roteiro');
-            const [selectedDay, setSelectedDay] = useState(0);
-
-            const itinerario = [
-                { dia: "30/12 - 02/01", titulo: "Roma: A Cidade Eterna", local: "Roma", desc: "Foco total em história e Réveillon. Sem necessidade de carro. Visitas: Coliseu, Vaticano e Trastevere." },
-                { dia: "03/01", titulo: "Retirada dos Carros e Úmbria", local: "Orvieto / Toscana", desc: "Retirada dos 2 veículos. Parada em Orvieto para almoço. Check-in na Villa na Toscana." },
-                { dia: "04/01", titulo: "Florença: Renascimento", local: "Florença", desc: "Estacionar no Villa Costanza. Uso do Tramvia para o centro. Ver o David de Michelangelo." },
-                { dia: "05/01", titulo: "Torre de Pisa e Lucca", local: "Pisa / Lucca", desc: "Fotos na Torre pela manhã. Tarde em Lucca para pedalar sobre as muralhas medievais." },
-                { dia: "06/01", titulo: "San Gimignano e Volterra", local: "San Gimignano", desc: "As famosas torres e o clima místico de Volterra. Ótimo para queijos e vinhos." },
-                { dia: "07/01", titulo: "Val d'Orcia: Cartão Postal", local: "Pienza / Montepulciano", desc: "Estradas de ciprestes. Visita a Pienza (cidade do queijo pecorino) e Montepulciano." },
-                { dia: "08/01", titulo: "Siena: O Coração Toscano", local: "Siena", desc: "Piazza del Campo e o Duomo. Atenção máxima às ZTLs ao redor do centro histórico." },
-                { dia: "09/01", titulo: "Rota Chianti (SR222)", local: "Chianti", desc: "Dirigir pela estrada mais bonita da Itália. Degustações: elejam motoristas da rodada!" },
-                { dia: "10/01", titulo: "Dia Livre ou Compras", local: "Toscana", desc: "Sugestão: Outlet The Mall para o grupo. Ou relaxar na Villa e aproveitar a gastronomia." },
-                { dia: "11/01 - 13/01", titulo: "Veneza: Canais e Magia", local: "Veneza", desc: "Deixar carros em Mestre ou Piazzale Roma. Exploração a pé e de Vaporetto." },
-                { dia: "14/01 - 16/01", titulo: "Alpes e Bernina Express", local: "Tirano / Suíça", desc: "Dirigir até a fronteira. Trem panorâmico Bernina Express. Paisagens de neve incríveis." },
-                { dia: "17/01 - 20/01", titulo: "Milão e Lago de Como", local: "Milão", desc: "Últimas compras em Milão. Passeio de barco no Lago de Como. Devolução no aeroporto." }
-            ];
-
-            return (
-                <div className="min-h-screen flex flex-col">
-                    <header className="bg-indigo-900 text-white p-6 shadow-md text-center">
-                        <h1 className="text-2xl font-bold tracking-tight">ITÁLIA 2027 🇮🇹</h1>
-                        <p className="text-indigo-200 text-sm mt-1 uppercase tracking-widest">Grupo de 10 | Comboio de 2 Carros</p>
-                    </header>
-
-                    <nav className="flex bg-white border-b sticky top-0 z-20 shadow-sm">
-                        <button onClick={() => setTab('roteiro')} className={`flex-1 py-4 text-sm font-bold uppercase ${tab === 'roteiro' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-slate-400'}`}>Roteiro</button>
-                        <button onClick={() => setTab('carros')} className={`flex-1 py-4 text-sm font-bold uppercase ${tab === 'carros' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-slate-400'}`}>Comboio/ZTL</button>
-                    </nav>
-
-                    <main className="flex-1 p-4 max-w-4xl mx-auto w-full">
-                        {tab === 'roteiro' ? (
-                            <div className="space-y-4">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="space-y-2 h-[50vh] md:h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
-                                        {itinerario.map((item, idx) => (
-                                            <div key={idx} onClick={() => setSelectedDay(idx)} className={`p-4 rounded-xl border-2 transition-all cursor-pointer ${selectedDay === idx ? 'bg-indigo-50 border-indigo-300 shadow-sm' : 'bg-white border-slate-100'}`}>
-                                                <span className="text-[10px] font-bold text-indigo-500 uppercase">{item.dia}</span>
-                                                <h3 className="font-bold text-slate-800 text-sm line-clamp-1">{item.titulo}</h3>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 h-fit sticky top-24">
-                                        <h2 className="text-xl font-bold text-slate-900">{itinerario[selectedDay].titulo}</h2>
-                                        <div className="flex items-center gap-2 text-slate-400 text-xs mt-1 mb-4">
-                                            <IconMap /> {itinerario[selectedDay].local}
-                                        </div>
-                                        <p className="text-slate-600 text-sm leading-relaxed bg-slate-50 p-4 rounded-lg border-l-4 border-indigo-400">
-                                            {itinerario[selectedDay].desc}
-                                        </p>
-                                        <div className="mt-6 space-y-2">
-                                            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-tighter">Dica para o Grupo</h4>
-                                            <div className="flex items-start gap-2 text-xs text-slate-500">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1"></div>
-                                                <span>Sincronizar horários de saída para evitar perda de contacto entre os carros.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="space-y-6">
-                                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
-                                    <h3 className="text-red-800 font-bold flex items-center gap-2"><IconAlert /> PERIGO: ZTL</h3>
-                                    <p className="text-red-700 text-sm mt-2">Zonas de Tráfego Limitado: Se entrar sem autorização em centros históricos, a multa é automática para os dois carros. Procurem estacionamentos externos.</p>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                                    <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                                        <h4 className="font-bold text-indigo-900 mb-3 flex items-center gap-2"><IconCar /> Regras do Comboio</h4>
-                                        <ul className="space-y-3 text-slate-600">
-                                            <li className="flex gap-2"><span>•</span> O carro da frente avisa sobre buracos e radares via WhatsApp.</li>
-                                            <li className="flex gap-2"><span>•</span> O carro de trás nunca deve acelerar se o da frente ficar num semáforo.</li>
-                                            <li className="flex gap-2"><span>•</span> Mantenham os rádios/telemóveis sempre carregados.</li>
-                                        </ul>
-                                    </div>
-                                    <div className="bg-indigo-600 text-white p-5 rounded-xl shadow-sm">
-                                        <h4 className="font-bold mb-3">Links Úteis de Apoio</h4>
-                                        <div className="space-y-2">
-                                            <div className="p-2 bg-indigo-700 rounded text-xs">APP: EasyPark (Estacionamento)</div>
-                                            <div className="p-2 bg-indigo-700 rounded text-xs">APP: Waze (Com alertas ZTL)</div>
-                                            <div className="p-2 bg-indigo-700 rounded text-xs">SOS Itália: 112</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                    </main>
-
-                    <footer className="p-6 text-center text-slate-400 text-[10px] uppercase tracking-widest">
-                        Itália 2027 • Roteiro Digital de Viagem
-                    </footer>
-                </div>
-            );
+        :root {
+            --ita-green: #008C45;
+            --ita-white: #F4F9FF;
+            --ita-red: #CD212A;
+            --dark: #2d3436;
         }
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--ita-white);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--ita-green) 33%, white 33%, white 66%, var(--ita-red) 66%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ddd;
+        }
+
+        .header-content {
+            background: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { margin: 0; color: var(--dark); text-transform: uppercase; letter-spacing: 2px; }
+        h2 { color: var(--ita-green); border-bottom: 2px solid var(--ita-red); padding-bottom: 5px; }
+
+        .container { max-width: 900px; margin: 20px auto; padding: 20px; }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            border-left: 8px solid var(--ita-green);
+        }
+
+        .highlight-red { border-left-color: var(--ita-red); }
+        .highlight-gold { border-left-color: #f1c40f; }
+
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        
+        .flight-item { background: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 8px; font-size: 0.9em; }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--ita-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: var(--ita-red); }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+        .bg-blue { background: #0984e3; }
+        .bg-white { background: #636e72; color: white; border: 1px solid #ddd; }
+        .bg-yellow { background: #fdcb6e; color: #000; }
+
+        ul { list-style-type: none; padding-left: 0; }
+        li { margin-bottom: 8px; }
+        li i { color: var(--ita-green); margin-right: 10px; }
+
+        .date-tag { font-weight: bold; color: var(--ita-red); display: block; margin-top: 10px; }
+
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Itália 2027</h1>
+        <p>Roteiro Oficial do Grupo</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- VOOS -->
+    <div class="card highlight-red">
+        <h2><i class="fa-solid fa-plane"></i> Cronograma de Voos</h2>
+        <div class="flight-item"><strong>30/12 - 20:15:</strong> São Paulo ➔ Madri <small>(Chegada 31/12 10:15)</small></div>
+        <div class="flight-item"><strong>02/01 - 13:05:</strong> Madri ➔ Roma <small>(Chegada 02/01 15:30)</small></div>
+        <div class="flight-item"><strong>22/01 - 20:20:</strong> Roma ➔ Madri <small>(Conexão Curta)</small></div>
+        <div class="flight-item"><strong>22/01 - 23:55:</strong> Madri ➔ São Paulo <small>(Chegada 23/01 07:05)</small></div>
+    </div>
+
+    <!-- PREPARAÇÃO -->
+    <div class="card">
+        <h2><i class="fa-solid fa-clipboard-check"></i> Checklist Pré-Viagem</h2>
+        <ul>
+            <li><i class="fa-solid fa-link"></i> <a href="https://travel-europe.europa.eu/pt/etias" target="_blank">Autorização ETIAS</a></li>
+            <li><i class="fa-solid fa-link"></i> <a href="https://www.seguroviagem.srv.br/" target="_blank">Seguro Viagem Obrigatório</a></li>
+            <li><i class="fa-solid fa-link"></i> <a href="https://www.detran.sp.gov.br..." target="_blank">Emissão do PID (Habilitação Internacional)</a></li>
+            <li><i class="fa-solid fa-link"></i> <a href="https://www.rhb.ch/en/tickets/group-tickets/" target="_blank">Reservar Trem Suíça (Grupo 10+)</a></li>
+        </ul>
+    </div>
+
+    <!-- CUSTOS E DICAS -->
+    <div class="card highlight-gold">
+        <h2><i class="fa-solid fa-coins"></i> Gastos & Dicas Rápidas</h2>
+        <div class="info-grid">
+            <div>
+                <strong>Custos Fixos:</strong>
+                <ul>
+                    <li>🚗 Carro: € 1000.00</li>
+                    <li>🚂 Trem Regional: € 24.00/pessoa</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Estacionamento na Itália:</strong><br>
+                <span class="badge bg-white">Branca</span> Grátis<br>
+                <span class="badge bg-blue">Azul</span> Pago<br>
+                <span class="badge bg-yellow">Amarela</span> Proibido (Residente)
+            </div>
+        </div>
+    </div>
+
+    <!-- DESTINO: MADRI -->
+    <div class="card">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Etapa 1: Madri Encantada</h2>
+        <p><strong>Período:</strong> 31/12/2026 a 02/01/2027 | <strong>Hospedagem:</strong> Centro (A definir)</p>
+        
+        <span class="date-tag">31/12 - Arte e Modernidade</span>
+        <ul>
+            <li>Triângulo da Arte: Reina Sofía, Prado e Thyssen-Bornemisza</li>
+            <li>Compras na Gran Vía & Almoço no Mercado San Antón</li>
+            <li>Pôr do sol no Parque Del Retiro</li>
+        </ul>
+
+        <span class="date-tag">01/01 - O Coração da Cidade</span>
+        <ul>
+            <li>Puerta del Sol & Plaza Mayor</li>
+            <li>Tapas no Mercado de San Miguel</li>
+            <li>Catedral de Almudena & Palácio Real</li>
+            <li>Experiência Imersiva no Nomad Museo</li>
+        </ul>
+    </div>
+
+    <!-- DESTINO: ROMA -->
+    <div class="card">
+        <h2><i class="fa-solid fa-colosseum"></i> Etapa 2: Roma Imperial</h2>
+        <p><strong>Período:</strong> 02/01/2027 a 05/01/2027 | <strong>Hospedagem:</strong> Monti (A definir)</p>
+        
+        <span class="date-tag">02/01 - Boas-vindas</span>
+        <ul>
+            <li>Chegada e Jantar típico no bairro de Trastevere</li>
+        </ul>
+
+        <span class="date-tag">03/01 - Vaticano</span>
+        <ul>
+            <li>Museus do Vaticano e Capela Sistina</li>
+        </ul>
+
+        <span class="date-tag">04/01 - Roma Antiga</span>
+        <ul>
+            <li>Coliseu, Fórum Romano e Monte Palatino</li>
+        </ul>
+
+        <span class="date-tag">05/01 - Praças e Fontes</span>
+        <ul>
+            <li>Fontana di Trevi, Panteão e Piazza Navona</li>
+            <li>Piazza di Spagna e Jardins da Villa Borghese</li>
+            <li><strong>Noite:</strong> Partida para a Toscana 🍷</li>
+        </ul>
+    </div>
+
+    <!-- ÁREA EDITÁVEL PARA NOVOS ROTEIROS -->
+    <div class="card highlight-red" style="border-style: dashed; border-width: 2px;">
+        <h2><i class="fa-solid fa-plus"></i> Próximos Destinos</h2>
+        <p>Em breve: Toscana, Florença e Alpes Suíços...</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Viagem Itália 2027 - Organização de Grupo</p>
+</footer>
+
 </body>
 </html>
