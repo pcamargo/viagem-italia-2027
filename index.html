@@ -38,6 +38,7 @@
 
         h1 { margin: 0; color: var(--dark); text-transform: uppercase; letter-spacing: 2px; }
         h2 { color: var(--ita-green); border-bottom: 2px solid var(--ita-red); padding-bottom: 5px; }
+        h3 { color: var(--dark); margin-top: 5px; margin-bottom: 8px; font-size: 0.95em; }
 
         .container { max-width: 900px; margin: 20px auto; padding: 20px; }
 
@@ -84,7 +85,9 @@
         li { margin-bottom: 8px; }
         li i { color: var(--ita-green); margin-right: 10px; }
 
-        .date-tag { font-weight: bold; color: var(--ita-red); display: block; margin-top: 10px; }
+        .date-tag { font-weight: bold; color: var(--ita-red); display: block; margin-top: 10px; margin-bottom: 10px; }
+
+        .stage-description { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-bottom: 15px; line-height: 1.5; }
 
         footer { text-align: center; padding: 40px; color: #666; font-size: 0.8em; }
     </style>
@@ -113,11 +116,11 @@
     <div class="card">
         <h2><i class="fa-solid fa-clipboard-check"></i> Checklist Pré-Viagem</h2>
         <ul>
-            <li><i class="fa-solid fa-link"></i> <a href="https://travel-europe.europa.eu/pt/ees" target="_blank">Entry/Exit System (EES)</a></li>
-            <li><i class="fa-solid fa-link"></i> <a href="https://travel-europe.europa.eu/pt/etias" target="_blank">European Travel Information and Authorisation System (ETIAS)</a></li>
-            <li><i class="fa-solid fa-link"></i> <a href="https://www.seguroviagem.srv.br/" target="_blank">Seguro Viagem Obrigatório</a></li>
-            <li><i class="fa-solid fa-link"></i> <a href="https://www.detran.sp.gov.br..." target="_blank">Emissão do PID (Habilitação Internacional)</a></li>
-            <li><i class="fa-solid fa-link"></i> <a href="https://www.rhb.ch/en/tickets/group-tickets/" target="_blank">Reservar Trem Suíça (Grupo 10+)</a></li>
+            <li><i class="fa-solid fa-passport"></i> <a href="https://travel-europe.europa.eu/pt/ees" target="_blank">Entry/Exit System (EES)</a></li>
+            <li><i class="fa-solid fa-id-card"></i> <a href="https://travel-europe.europa.eu/pt/etias" target="_blank">European Travel Information and Authorisation System (ETIAS)</a></li>
+            <li><i class="fa-solid fa-heart"></i> <a href="https://www.seguroviagem.srv.br/" target="_blank">Seguro Viagem Obrigatório</a></li>
+            <li><i class="fa-solid fa-license"></i> <a href="https://www.detran.sp.gov.br..." target="_blank">Emissão do PID (Habilitação Internacional)</a></li>
+            <li><i class="fa-solid fa-train"></i> <a href="https://www.rhb.ch/en/tickets/group-tickets/" target="_blank">Reservar Trem Suíça (Grupo 10+)</a></li>
         </ul>
     </div>
 
@@ -128,11 +131,11 @@
             <div>
                 <strong>Custos Fixos:</strong>
                 <ul>
-                    <li>🚗 Carro: € 1000.00</li>
-                    <li>🚂 Trem Regional: € 24.00/pessoa</li>
-                    <li>🛂 ETIAS: € 20,00/pessoa</li>
-                    <li>⛲ Tivoli (Villae Pass): € 30,00/pessoa</li>
-                    <li>⛪ Duomo de Milão: € 26,00/pessoa</li>
+                    <li><i class="fa-solid fa-car"></i> Carro: € 1000.00</li>
+                    <li><i class="fa-solid fa-train"></i> Trem Regional: € 24.00/pessoa</li>
+                    <li><i class="fa-solid fa-stamp"></i> ETIAS: € 20,00/pessoa</li>
+                    <li><i class="fa-solid fa-fountain"></i> Tivoli (Villae Pass): € 30,00/pessoa</li>
+                    <li><i class="fa-solid fa-gopuram"></i> Duomo de Milão: € 26,00/pessoa</li>
                 </ul>
             </div>
             <div>
@@ -145,15 +148,15 @@
     </div>
 
     <div class="card highlight-gold">
-        <h2><i class="fa-solid fa-coins"></i> Ingressos</h2>
+        <h2><i class="fa-solid fa-ticket"></i> Ingressos</h2>
         <div class="info-grid">
             <div>
                 <strong>Ingressos:</strong><br>
                 <ul>
-                    <li>🇻🇦 <a href="https://ticketing.colosseo.it/es" target="_blank">Vaticano + Capela</a>: €25 adulto e €15 criança</li>
-                    <li>🏛️ <a href="https://www.colosseumdiroma-tickets.com/" target="_blank">Coliseu + Forum + Palatino</a>: € 24,00/pessoa</li>
-                    <li>⛲ <a href="https://villae.cultura.gov.it/en/opening-time-and-tickets" target="_blank">Tivoli (Villae Pass)</a>: € 30,00/pessoa</li>
-                    <li>⛪ <a href="https://milanoticket.com/" target="_blank">Duomo de Milão</a>: € 26,00/pessoa</li>
+                    <li><i class="fa-solid fa-gopuram"></i> <a href="https://ticketing.colosseo.it/es" target="_blank">Vaticano + Capela</a>: €25 adulto e €15 criança</li>
+                    <li><i class="fa-solid fa-building-columns"></i> <a href="https://www.colosseumdiroma-tickets.com/" target="_blank">Coliseu + Forum + Palatino</a>: € 24,00/pessoa</li>
+                    <li><i class="fa-solid fa-fountain"></i> <a href="https://villae.cultura.gov.it/en/opening-time-and-tickets" target="_blank">Tivoli (Villae Pass)</a>: € 30,00/pessoa</li>
+                    <li><i class="fa-solid fa-gopuram"></i> <a href="https://milanoticket.com/" target="_blank">Duomo de Milão</a>: € 26,00/pessoa</li>
                 </ul>
             </div>
         </div>
@@ -166,6 +169,9 @@
         <p><strong>Período:</strong> 31/12/2026 a 02/01/2027</p>
         <p><strong>Hospedagem:</strong> Espahotel Plaza España</p>
         <p><strong>Localização:</strong> Plaza de España, 7, Centro</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Bem-vindo a Madri! Explore a capital espanhola com seus museus de renome mundial, arquitetura impressionante e vida noturna vibrante. Desfrute de tapas autênticas e experiências culturais imersivas antes de seguir para Roma.
+        </div>
         
         <span class="date-tag">31/12 - Arte e Modernidade</span>
         <ul>
@@ -178,7 +184,7 @@
         <ul>
             <li><i class="fa-solid fa-location-dot"></i> Puerta del Sol & Plaza Mayor</li>
             <li><i class="fa-solid fa-utensils"></i> Tapas no Mercado de San Miguel</li>
-            <li><i class="fa-solid fa-gothic"></i> Catedral de Almudena & Palácio Real</li>
+            <li><i class="fa-solid fa-gopuram"></i> Catedral de Almudena & Palácio Real</li>
             <li><i class="fa-solid fa-wand-magic-sparkles"></i> Experiência Imersiva no Nomad Museo</li>
             <li><i class="fa-solid fa-cookie-bite"></i> A fábrica de chocolate de San Ginès</li>
         </ul>
@@ -186,10 +192,13 @@
 
     <!-- DESTINO: ROMA -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 2: Roma Imperial</h2>
+        <h2><i class="fa-solid fa-gopuram"></i> Etapa 2: Roma Imperial</h2>
         <p><strong>Período:</strong> 02/01/2027 a 06/01/2027</p>
         <p><strong>Hospedagem:</strong> Domus Pontificia</p>
         <p><strong>Localização:</strong> 27, Via Fabio Massimo - Vaticano Prati</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> A Cidade Eterna aguarda! Explore ruínas milenares, admire obras-primas renascentistas e maravilhe-se com a grandiosidade do Vaticano. Roma combina história antiga, arte incomparável e culinária de classe mundial em um cenário inesquecível.
+        </div>
         
         <span class="date-tag">02/01 - Boas-vindas</span>
         <ul>
@@ -198,13 +207,13 @@
 
         <span class="date-tag">03/01 - Vaticano</span>
         <ul>
-            <li><i class="fa-solid fa-place-of-worship"></i> Museus do Vaticano e Capela Sistina</li>
+            <li><i class="fa-solid fa-gopuram"></i> Museus do Vaticano e Capela Sistina</li>
             <li><i class="fa-solid fa-tree"></i> Piazza di Spagna, Jardim da Villa Borghese</li>
         </ul>
 
         <span class="date-tag">04/01 - Roma Antiga</span>
         <ul>
-            <li><i class="fa-solid fa-monument"></i> Coliseu, Forum Romano e Monte Palatino</li>
+            <li><i class="fa-solid fa-building-columns"></i> Coliseu, Forum Romano e Monte Palatino</li>
             <li><i class="fa-solid fa-water-ladder"></i> Fontana di Trevi, Panteão, Piazza Navona</li>
         </ul>
         
@@ -213,12 +222,12 @@
             <li><i class="fa-solid fa-building-columns"></i> Vila Adriana</li>
             <li><i class="fa-solid fa-utensils"></i> Ristorante Sibilla no centro histórico</li>
             <li><i class="fa-solid fa-fountain"></i> Villa d'Este (Fontana dell'Organo)</li>
-            <li><i class="fa-solid fa-archway"></i> Santuário de Hércules Victor</li>
+            <li><i class="fa-solid fa-gopuram"></i> Santuário de Hércules Victor</li>
         </ul>
 
         <span class="date-tag">06/01 - Partindo para Toscana</span>
         <ul>
-            <li><strong>Manhã:</strong> Partida para a Toscana 🍷</li>
+            <li><i class="fa-solid fa-bus"></i> <strong>Manhã:</strong> Partida para a Toscana 🍷</li>
         </ul>
     </div>
 
@@ -228,193 +237,246 @@
         <p><strong>Período:</strong> 06/01/2027 a 11/01/2027</p>
         <p><strong>Hospedagem:</strong> Hotel Santa Caterina</p>
         <p><strong>Localização:</strong> Via E.S. Piccolomini, 7 - Siena</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Descubra o coração rural da Itália! Visite vinhedos de classe mundial, cidades medievais de tirar o fôlego e paisagens de cartão-postal. Saboreie vinhos Brunello, queijos locais e a autêntica hospitalidade toscana em suas cidades históricas.
+        </div>
         
         <span class="date-tag">06/01 - Val d'Orcia</span>
         <ul>
-            <li><i class="fa-solid fa-glass-water"></i> Montalcino (Experimentar o famoso vinho Brunello)</li>
-            <li><i class="fa-solid fa-map"></i> Quirico d’Orcia</li>
+            <li><i class="fa-solid fa-wine-glass"></i> Montalcino (Experimentar o famoso vinho Brunello)</li>
+            <li><i class="fa-solid fa-map"></i> Quirico d'Orcia</li>
         </ul>
 
         <span class="date-tag">07/01 - Montepulciano</span>
         <ul>
             <li><i class="fa-solid fa-hot-tub-person"></i> Bagno Vignoni</li>
             <li><i class="fa-solid fa-cheese"></i> Pienza</li>
-            <li><i class="fa-solid fa-tree"></i> Montepulciano</li>
+            <li><i class="fa-solid fa-gopuram"></i> Montepulciano</li>
         </ul>
 
         <span class="date-tag">08/01 - Cidades Medievais</span>
         <ul>
-            <li><i class="fa-solid fa-gothic"></i> Montefioralle</li>
-            <li><i class="fa-solid fa-gothic"></i> San Gimignano</li>
-            <li><i class="fa-solid fa-mountain-city"></i> Volterra</li>
+            <li><i class="fa-solid fa-gopuram"></i> Montefioralle</li>
+            <li><i class="fa-solid fa-gopuram"></i> San Gimignano</li>
+            <li><i class="fa-solid fa-gopuram"></i> Volterra</li>
             <li><i class="fa-solid fa-wine-bottle"></i> Castellina in Chianti</li>
         </ul>
 
         <span class="date-tag">09/01 - Siena</span>
         <ul>
-            <li><i class="fa-solid fa-city"></i> Passear em Siena</li>
+            <li><i class="fa-solid fa-gopuram"></i> Passear em Siena</li>
         </ul>
 
         <span class="date-tag">10/01 - Pisa & Lucca</span>
         <ul>
-            <li><i class="fa-solid fa-monument"></i> Pisa (Torre Inclinada)</li>
+            <li><i class="fa-solid fa-building-columns"></i> Pisa (Torre Inclinada)</li>
             <li><i class="fa-solid fa-bicycle"></i> Lucca (pedalar sobre as muralhas medievais)</li>
         </ul>
+
         <span class="date-tag">11/01 - Florença</span>
         <ul>
-            <li><i class="fa-solid fa-city"></i> Visita rápida a Siena</li>
-            <li><i class="fa-solid fa-church"></i> Florença: Catedral Duomo</li>
-            <li><i class="fa-solid fa-castle"></i> Florença: Palazzo Vecchio</li>
+            <li><i class="fa-solid fa-gopuram"></i> Visita rápida a Siena</li>
+            <li><i class="fa-solid fa-gopuram"></i> Florença: Catedral Duomo</li>
+            <li><i class="fa-solid fa-gopuram"></i> Florença: Palazzo Vecchio</li>
             <li><i class="fa-solid fa-utensils"></i> Jantar no Mercato Centrale</li>
             <li><i class="fa-solid fa-camera"></i> Pôr do sol na Piazzale Michelangelo</li>
             <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Sanduíche famoso: <a href="https://www.allanticovinaio.com/" target="_blank">All'Antico Vinaio</a></li>
-            <li><strong>Final do dia:</strong> Partida para Verona 🍷</li>
+            <li><i class="fa-solid fa-bus"></i> <strong>Final do dia:</strong> Partida para Verona 🍷</li>
         </ul>
     </div>
 
-    <!-- DESTINO: VERONA -->
+    <!-- DESTINO: VERONA/VENEZA -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 4: Veneza Romântica</h2>
+        <h2><i class="fa-solid fa-water"></i> Etapa 4: Veneza Romântica</h2>
         <p><strong>Período:</strong> 11/01/2027 a 14/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Bem-vindo ao romance! Explore os canais mágicos de Veneza, as ilhas coloridas de Burano e os vidros artesanais de Murano. Navegue pela lagoa, passeie por ruas de pedestres e descubra a beleza única desta cidade sobre a água.
+        </div>
         
         <span class="date-tag">11/01 - Chegada a noite</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Chegada e acomodação</li>
+            <li><i class="fa-solid fa-bed"></i> Chegada e acomodação</li>
         </ul>
 
         <span class="date-tag">12/01 - Veneza</span>
         <ul>
-            <li><i class="fa-solid fa-place-of-worship"></i> Passeio por Veneza</li>
+            <li><i class="fa-solid fa-gopuram"></i> Passeio por Veneza</li>
+            <li><i class="fa-solid fa-water"></i> Passeio de gôndola pelas principais atrações</li>
+            <li><i class="fa-solid fa-gopuram"></i> Basílica de São Marcos e Doge's Palace</li>
         </ul>
 
-        <span class="date-tag">13/01 - Veneza</span>
+        <span class="date-tag">13/01 - Ilhas da Lagoa</span>
         <ul>
-            <li><i class="fa-solid fa-place-of-worship"></i> Burano e Murano</li>
+            <li><i class="fa-solid fa-palette"></i> Burano (casas coloridas e renda tradicional)</li>
+            <li><i class="fa-solid fa-wine-glass"></i> Murano (fábricas de vidro soprado)</li>
+            <li><i class="fa-solid fa-utensils"></i> Almoço em uma das ilhas</li>
         </ul>
 
-        
         <span class="date-tag">14/01 - Partindo para Bergamo</span>
         <ul>
-            <li><strong>Manhã:</strong> Partida para a Bergamo</li>
+            <li><i class="fa-solid fa-bus"></i> <strong>Manhã:</strong> Partida para Bergamo</li>
         </ul>
     </div>
 
 
-    <!-- DESTINO: Bergamo ou Lecco -->
+    <!-- DESTINO: Bergamo/Lagos -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 5: Bergamo ou Lecco</h2>
+        <h2><i class="fa-solid fa-water"></i> Etapa 5: Bergamo & Lagos Italianos</h2>
         <p><strong>Período:</strong> 14/01/2027 a 15/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Desfrute das belezas naturais dos lagos do norte italiano. O Lago di Garda encanta com suas águas cristalinas e castelos históricos, enquanto o Lago di Como oferece paisagens alpinas de tirar o fôlego e vilarejos pitorescos.
+        </div>
         
         <span class="date-tag">14/01 - Chegada pela manhã</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Lago di Garda</li>
-            <li><i class="fa-solid fa-utensils"></i> Castelo Scaligero em Sirmione</li>
+            <li><i class="fa-solid fa-water"></i> Lago di Garda</li>
+            <li><i class="fa-solid fa-gopuram"></i> Castelo Scaligero em Sirmione</li>
+            <li><i class="fa-solid fa-utensils"></i> Almoço com vista para o lago</li>
         </ul>
 
         <span class="date-tag">15/01 - Lago di Como</span>
         <ul>
-            <li><i class="fa-solid fa-place-of-worship"></i> Lago di Como (Varenna)</li>
-            <li><strong>Final do dia:</strong> Partida para a Tirano</li>
+            <li><i class="fa-solid fa-water"></i> Lago di Como (Varenna)</li>
+            <li><i class="fa-solid fa-gopuram"></i> Passeio pela Villa Monastero</li>
+            <li><i class="fa-solid fa-cable-car"></i> Teleférico para vistas panorâmicas</li>
+            <li><i class="fa-solid fa-bus"></i> <strong>Final do dia:</strong> Partida para Tirano</li>
         </ul>
     </div>
 
 
-    <!-- DESTINO: Tirano -->
+    <!-- DESTINO: Tirano/Suíça -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 6: Tirano</h2>
+        <h2><i class="fa-solid fa-mountain"></i> Etapa 6: Tirano & Suíça</h2>
         <p><strong>Período:</strong> 15/01/2027 a 17/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Explore as montanhas deslumbrantes dos Alpes! O trem de Tirano oferece uma jornada panorâmica espetacular até Pontresina e St. Moritz na Suíça. Maravilhe-se com as vistas alpinas e aproveite a natureza pristina.
+        </div>
         
         <span class="date-tag">15/01 - Chegada a noite</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Chegada e acomodação</li>
+            <li><i class="fa-solid fa-bed"></i> Chegada e acomodação</li>
+            <li><i class="fa-solid fa-utensils"></i> Jantar local</li>
         </ul>
 
-        <span class="date-tag">16/01 - Suiça</span>
+        <span class="date-tag">16/01 - Suíça</span>
         <ul>
-            <li><i class="fa-solid fa-place-of-worship"></i> Trem rumo a Pontresina/St Moritz</li>
+            <li><i class="fa-solid fa-train"></i> Trem Bernina - Rotina Vermelha até Pontresina/St Moritz</li>
+            <li><i class="fa-solid fa-mountain"></i> Passeio entre as montanhas suíças</li>
+            <li><i class="fa-solid fa-camera"></i> Fotografia das paisagens alpinas</li>
         </ul>
 
         <span class="date-tag">17/01 - Partindo para Milão</span>
         <ul>
-            <li><strong>Manhã:</strong> Partida para a Milão</li>
+            <li><i class="fa-solid fa-bus"></i> <strong>Manhã:</strong> Retorno e partida para Milão</li>
         </ul>
     </div>
 
 
     <!-- DESTINO: Milão -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 7: Milão</h2>
+        <h2><i class="fa-solid fa-gopuram"></i> Etapa 7: Milão - Design & Moda</h2>
         <p><strong>Período:</strong> 17/01/2027 a 18/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Bem-vindo à capital da moda e design italiano! Milão é um centro de inovação, arte e sofisticação. Explore o famoso Duomo gótico, galerias de arte de classe mundial e a vibração urbana de uma das cidades mais influentes da Europa.
+        </div>
         
         <span class="date-tag">17/01 - Chegada</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Visita Duomo</li>
+            <li><i class="fa-solid fa-gopuram"></i> Visita Duomo di Milano (ingresso incluído)</li>
+            <li><i class="fa-solid fa-palette"></i> Galeria Vittorio Emanuele II</li>
+            <li><i class="fa-solid fa-utensils"></i> Jantar em Milano</li>
         </ul>
 
         <span class="date-tag">18/01 - Partindo para Paris</span>
         <ul>
-            <li><strong>Manhã:</strong> Pegar voo para Paris</li>
+            <li><i class="fa-solid fa-shopping-bag"></i> <strong>Manhã:</strong> Compras no Quadrilátero da Moda</li>
+            <li><i class="fa-solid fa-plane"></i> <strong>Tarde:</strong> Pegar voo para Paris</li>
         </ul>
     </div>
 
 
     <!-- DESTINO: Paris -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 8: Paris</h2>
+        <h2><i class="fa-solid fa-gopuram"></i> Etapa 8: Paris - A Cidade Luz</h2>
         <p><strong>Período:</strong> 18/01/2027 a 21/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> A Cidade Luz o aguarda! Paris é o sinônimo de romance, arte e cultura. Admire o ícone da Torre Eiffel, explore os museus de renome mundial como o Louvre, passeie pelo Rio Sena e aproveite a culinária francesa incomparável.
+        </div>
         
         <span class="date-tag">18/01 - Chegada</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Passeio livre</li>
+            <li><i class="fa-solid fa-bus"></i> Chegada e traslado ao hotel</li>
+            <li><i class="fa-solid fa-utensils"></i> Passeio livre pela cidade</li>
+            <li><i class="fa-solid fa-restaurant"></i> Jantar em bistrô parisiense</li>
         </ul>
 
-        <span class="date-tag">19/01 - Passeios</span>
+        <span class="date-tag">19/01 - Monumentos Icônicos</span>
         <ul>
-            <li><strong>Manhã:</strong> Torre Eifel</li>
+            <li><i class="fa-solid fa-gopuram"></i> <strong>Manhã:</strong> Torre Eifel (subida incluída)</li>
+            <li><i class="fa-solid fa-gopuram"></i> Trocadéro e vistas panorâmicas</li>
+            <li><i class="fa-solid fa-camera"></i> Passeio de barco pelo Rio Sena</li>
+            <li><i class="fa-solid fa-palette"></i> Museu do Louvre</li>
         </ul>
 
-        <span class="date-tag">20/01 - Passeios</span>
+        <span class="date-tag">20/01 - Arte & Cultura</span>
         <ul>
-            <li><strong>Manhã:</strong> Definir passeios</li>
+            <li><i class="fa-solid fa-palette"></i> <strong>Manhã:</strong> Catedral de Notre-Dame</li>
+            <li><i class="fa-solid fa-gopuram"></i> Île de la Cité e Sainte-Chapelle</li>
+            <li><i class="fa-solid fa-shopping-bag"></i> Compras no Champs-Élysées</li>
+            <li><i class="fa-solid fa-utensils"></i> Sorvete e café em cafés tradicionais</li>
         </ul>
 
-        <span class="date-tag">21/01 - Voltando pra Milão</span>
+        <span class="date-tag">21/01 - Voltando para Milão</span>
         <ul>
-            <li><strong>Manhã:</strong> Pegar voo para Milão</li>
+            <li><i class="fa-solid fa-plane"></i> <strong>Manhã:</strong> Pegar voo para Milão</li>
+            <li><i class="fa-solid fa-utensils"></i> Última refeição em Paris</li>
         </ul>
     </div>
 
-    <!-- DESTINO: Voltando pra casa -->
+    <!-- DESTINO: Último dia - Roma -->
     <div class="card">
-        <h2><i class="fa-solid fa-gothic"></i> Etapa 9: Roma</h2>
+        <h2><i class="fa-solid fa-gopuram"></i> Etapa 9: Último Dia - Retorno</h2>
         <p><strong>Período:</strong> 21/01/2027 a 23/01/2027</p>
         <p><strong>Hospedagem:</strong> A Definir</p>
         <p><strong>Localização:</strong> A Definir</p>
+        <div class="stage-description">
+            <i class="fa-solid fa-info-circle"></i> Os últimos momentos da viagem! Antes de retornar ao Brasil, desfrute dos arredores de Roma e prepare-se para a partida. Relembre os melhores momentos desta jornada inesquecível pela Europa.
+        </div>
         
         <span class="date-tag">21/01 - Chegada</span>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Arredores de Roma</li>
+            <li><i class="fa-solid fa-gopuram"></i> Explorar arredores de Roma</li>
+            <li><i class="fa-solid fa-utensils"></i> Almoço com vista para a cidade</li>
         </ul>
 
-        <span class="date-tag">22/01 - Voltando pra Casa</span>
+        <span class="date-tag">22/01 - Voltando para Casa</span>
         <ul>
-            <li><strong>Manhã:</strong> Pegar voo no final do dia</li>
+            <li><i class="fa-solid fa-clock"></i> <strong>Manhã:</strong> Check-out do hotel</li>
+            <li><i class="fa-solid fa-camera"></i> Últimas fotos de recordação</li>
+            <li><i class="fa-solid fa-plane"></i> <strong>20:20:</strong> Voo Roma ➔ Madri (Conexão)</li>
+            <li><i class="fa-solid fa-plane"></i> <strong>23:55:</strong> Voo Madri ➔ São Paulo</li>
+        </ul>
+
+        <span class="date-tag">23/01 - Chegada em Casa</span>
+        <ul>
+            <li><i class="fa-solid fa-home"></i> <strong>07:05:</strong> Chegada em São Paulo</li>
+            <li><i class="fa-solid fa-heart"></i> Fim de uma viagem memorável! Até a próxima aventura! 🇮🇹</li>
         </ul>
     </div>
 </div>
 
 <footer>
-    <p>Viagem Itália 2027 - Organização de Grupo</p>
+    <p>Viagem Itália 2027 - Organização de Grupo | Prepare-se para uma aventura inesquecível!</p>
 </footer>
 
 </body>
