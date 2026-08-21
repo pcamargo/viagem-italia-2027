@@ -1,413 +1,699 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itália 2027 | Roteiro de Viagem</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <title>Itália 2027 | Roteiro do Grupo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         :root {
-            --primary: #ff7a5a; /* warm coral */
-            --secondary: #ffd66b; /* sunny yellow */
-            --accent: #6ad3c8; /* sea mint */
-            --bg: #fffdf8; /* warm background */
-            --card: #ffffff;
-            --muted: #5b6d75;
-            --dark: #2d3436;
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box
+        }
 
         body {
-            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(180deg, #fffdf8 0%, #f4fbff 100%);
-            color: var(--dark);
             margin: 0;
-            padding: 0;
-            -webkit-font-smoothing:antialiased;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
         }
 
         header {
-            background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 50%, var(--primary) 100%);
-            padding: 40px 20px;
-            text-align: center;
-            color: #fff;
             position: relative;
             overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
         }
 
-        .confetti {
+        header:before,
+        header:after {
             position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06) 0 2px, transparent 3px),
-                              radial-gradient(circle at 80% 40%, rgba(255,255,255,0.04) 0 2px, transparent 3px);
-            opacity: 0.9;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
         }
 
-        .header-content {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 14px;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        header:before {
+            left: -65px;
+            bottom: -105px
         }
 
-        h1 { margin: 0; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
-        p.lead { margin: 6px 0 0; font-weight: 600; opacity: 0.95; }
+        header:after {
+            right: -55px;
+            top: -105px
+        }
 
-        .container { max-width: 960px; margin: 26px auto; padding: 20px; }
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95;
+            letter-spacing: .02em
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .section-title i {
+            margin-right: 8px;
+            color: var(--red)
+        }
+
+        .summary-grid,
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+            gap: 16px
+        }
+
+        .mini-card,
+        .card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .mini-card {
+            border-radius: 16px;
+            padding: 18px
+        }
+
+        .mini-card i {
+            float: right;
+            color: var(--sun);
+            font-size: 1.45rem
+        }
+
+        .mini-card strong {
+            display: block;
+            color: var(--green);
+            margin-bottom: 5px;
+            font-size: .92rem
+        }
+
+        .mini-card span {
+            font-size: .9rem
+        }
 
         .card {
-            background: var(--card);
-            border-radius: 14px;
-            padding: 18px;
-            margin-bottom: 22px;
-            box-shadow: 0 12px 30px rgba(15, 40, 60, 0.06);
-            border-left: 8px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
         }
 
-        .highlight-red { border-left-color: #ff6b6b; }
-        .highlight-gold { border-left-color: #f1c40f; }
-        .highlight-sunny { border-left-color: var(--secondary); }
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
 
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
 
-        .flight-item { background: #fffaf6; padding: 10px; border-radius: 8px; margin-bottom: 8px; font-size: 0.95em; }
+        .place-icon {
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
 
-        .btn {
-            display: inline-block;
-            padding: 8px 14px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .stay {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            margin: 18px 0 15px;
+            font-size: .9rem
+        }
+
+        .stay span {
+            padding: 7px 10px;
             border-radius: 8px;
-            margin: 6px 4px 0 0;
-            transition: transform .16s ease, box-shadow .16s ease;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            background: #f3f6f7
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,0.12); }
 
-        .badge { padding: 4px 10px; border-radius: 999px; font-size: 0.82em; font-weight: 700; color: white; }
-        .bg-blue { background: #0984e3; }
-        .bg-muted { background: #636e72; }
-        .bg-yellow { background: #fdcb6e; color: #000; }
+        .stage-description {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 18px;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
 
-        ul { list-style-type: none; padding-left: 0; margin: 0; }
-        li { margin-bottom: 8px; }
-        li i { color: var(--accent); margin-right: 10px; }
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
 
-        .date-tag { font-weight: 800; color: var(--primary); display: block; margin-top: 12px; margin-bottom: 10px; }
+        .day:first-of-type {
+            border-top: 0
+        }
 
-        .stage-description { background: linear-gradient(90deg,#ffffff 0%, #fffaf6 100%); padding: 12px; border-radius: 10px; margin-bottom: 12px; line-height: 1.5; }
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
 
-        .tips { background: #f7fffb; border-radius: 8px; padding: 10px; font-size: 0.95em; border: 1px dashed rgba(106,211,200,0.5); }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
 
-        footer { text-align: center; padding: 28px; color: #666; font-size: 0.9em; }
+        li {
+            margin: 7px 0;
+            line-height: 1.45
+        }
 
-        @media (max-width:600px){ header { padding: 26px 12px; } .header-content{ padding:10px 16px;} }
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        a {
+            color: var(--green);
+            font-weight: 700;
+            text-underline-offset: 3px
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px;
+            background: #fff;
+            box-shadow: 0 7px 18px #24313f12
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--red);
+            font-size: 1.05rem
+        }
+
+        .quick-card li {
+            font-size: .91rem
+        }
+
+        .quick-card li i {
+            color: var(--blue)
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.5
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
     </style>
 </head>
+
 <body>
-
-<header>
-    <div class="confetti" aria-hidden="true"></div>
-    <div class="header-content">
-        <h1>Itália 2027 ✨</h1>
-        <p class="lead">Roteiro Oficial do Grupo (10 pessoas) — família & amigos</p>
-    </div>
-</header>
-
-<div class="container">
-
-    <!-- VOOS -->
-    <div class="card highlight-red">
-        <h2><i class="fa-solid fa-plane"></i> Cronograma de Voos</h2>
-        <div class="flight-item"><strong>30/12 - 20:15:</strong> São Paulo ➔ Madri <small>(Chegada 31/12 10:15)</small></div>
-        <div class="flight-item"><strong>02/01 - 13:05:</strong> Madri ➔ Roma <small>(Chegada 02/01 15:30)</small></div>
-        <div class="flight-item"><strong>22/01 - 20:20:</strong> Roma ➔ Madri <small>(Conexão Curta)</small></div>
-        <div class="flight-item"><strong>22/01 - 23:55:</strong> Madri ➔ São Paulo <small>(Chegada 23/01 07:05)</small></div>
-    </div>
-
-    <!-- PREPARAÇÃO -->
-    <div class="card">
-        <h2><i class="fa-solid fa-clipboard-check"></i> Checklist Pré-Viagem</h2>
-        <ul>
-            <li><i class="fa-solid fa-passport"></i> <a href="https://travel-europe.europa.eu/pt/ees" target="_blank">Entry/Exit System (EES)</a></li>
-            <li><i class="fa-solid fa-id-card"></i> <a href="https://travel-europe.europa.eu/pt/etias" target="_blank">ETIAS</a></li>
-            <li><i class="fa-solid fa-heart"></i> <a href="https://www.seguroviagem.srv.br/" target="_blank">Seguro Viagem Obrigatório</a></li>
-            <li><i class="fa-solid fa-license"></i> Emissão do PID (Habilitação Internacional)</li>
-            <li><i class="fa-solid fa-train"></i> Reservar trajetos de trem com antecedência (Bernina, alta velocidade)</li>
-            <li><i class="fa-solid fa-credit-card"></i> Levar cartão e algo em espécie (pequenas lojas pedem cash)</li>
-        </ul>
-    </div>
-
-    <!-- CUSTOS E DICAS -->
-    <div class="card highlight-gold">
-        <h2><i class="fa-solid fa-coins"></i> Gastos & Dicas Rápidas</h2>
-        <div class="info-grid">
-            <div>
-                <strong>Custos Fixos:</strong>
+    <header>
+        <p class="eyebrow">Família + amigos · 10 viajantes</p>
+        <h1>Itália 2027</h1>
+        <p class="subtitle">Uma aventura entre sabores, história, montanhas e muita risada. 🇮🇹</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip" aria-label="Resumo da viagem">
+            <div><i class="fa-solid fa-calendar-days"></i>30 dez — 23 jan</div>
+            <div><i class="fa-solid fa-users"></i>Grupo de 10 pessoas</div>
+            <div><i class="fa-solid fa-route"></i>Brasil · Espanha · Itália · Suíça</div>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-plane-departure"></i>Voos e preparativos</h2>
+        <section class="summary-grid">
+            <div class="mini-card"><i class="fa-solid fa-plane"></i><strong>30/12 · 20:15</strong><span>São Paulo →
+                    Madri<br>Chegada em 31/12 às 10:15</span></div>
+            <div class="mini-card"><i class="fa-solid fa-plane"></i><strong>02/01 · 13:05</strong><span>Madri →
+                    Roma<br>Chegada às 15:30</span></div>
+            <div class="mini-card"><i class="fa-solid fa-plane"></i><strong>22/01 · 20:20</strong><span>Roma → Madri →
+                    São Paulo<br>Chegada em 23/01 às 07:05</span></div>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="✈">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <div>
+                    <h2>Antes de embarcar</h2>
+                    <p class="period">Pequenos detalhes para uma viagem tranquila</p>
+                </div>
+            </div>
+            <div class="tips-grid" style="margin-top:18px">
+                <div class="quick-card">
+                    <h3>Documentos</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-passport"></i>Passaporte válido e seguro-viagem.</li>
+                        <li><i class="fa-solid fa-id-card"></i>Verificar EES/ETIAS antes da partida.</li>
+                        <li><i class="fa-solid fa-car"></i>PID para quem for dirigir.</li>
+                    </ul>
+                </div>
+                <div class="quick-card">
+                    <h3>Grupo esperto</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-ticket"></i>Reservar atrações concorridas com antecedência.</li>
+                        <li><i class="fa-solid fa-snowflake"></i>Levar roupas em camadas para janeiro.</li>
+                        <li><i class="fa-solid fa-mobile-screen"></i>Baixar mapas e bilhetes no celular.</li>
+                    </ul>
+                </div>
+                <div class="quick-card">
+                    <h3>Reservas importantes</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-landmark"></i><a
+                                href="https://www.museivaticani.va/content/museivaticani/en.html" target="_blank"
+                                rel="noopener">Museus Vaticanos</a> e Coliseu.</li>
+                        <li><i class="fa-solid fa-train"></i>Para o trem panorâmico, verificar a rota de Tirano com
+                            antecedência.</li>
+                        <li><i class="fa-solid fa-church"></i>Duomo de Milão e atrações com horário marcado.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i>Roteiro dia a dia</h2>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-sun"></i></div>
+                <div>
+                    <h2>Madri Encantada</h2>
+                    <p class="period">31/12/2026 a 02/01/2027 · Espahotel Plaza España</p>
+                </div>
+            </div>
+            <div class="stay"><span><i class="fa-solid fa-location-dot"></i> Plaza de España, 7 · Centro</span><span>☀️
+                    Tapas, arte e caminhada</span></div>
+            <p class="stage-description">Começo com energia: museus, praças animadas e chocolate quente. Em janeiro,
+                confirme os horários especiais de Ano-Novo.</p>
+            <div class="day"><span class="date-tag">31/12 · Arte e modernidade</span>
                 <ul>
-                    <li><i class="fa-solid fa-car"></i> Carro (estimado para o grupo): € 1.000</li>
-                    <li><i class="fa-solid fa-train"></i> Trem Regional: € 24/pessoa</li>
-                    <li><i class="fa-solid fa-stamp"></i> ETIAS: € 20/pessoa</li>
-                    <li><i class="fa-solid fa-fountain"></i> Tivoli (Villae Pass): € 30/pessoa</li>
-                    <li><i class="fa-solid fa-gopuram"></i> Duomo de Milão: € 26/pessoa</li>
+                    <li><i class="fa-solid fa-palette"></i>Triângulo da Arte: Reina Sofía, Prado e Thyssen-Bornemisza.
+                    </li>
+                    <li><i class="fa-solid fa-bag-shopping"></i>Gran Vía e almoço no Mercado San Antón.</li>
+                    <li><i class="fa-solid fa-tree"></i>Pôr do sol no Parque del Retiro.</li>
                 </ul>
             </div>
-            <div>
-                <strong>Estacionamento:</strong><br>
-                <span class="badge bg-muted">Branca</span> Grátis<br>
-                <span class="badge bg-blue">Azul</span> Pago<br>
-                <span class="badge bg-yellow">Amarela</span> Proibido (Residente)
-            </div>
-        </div>
-    </div>
-
-    <div class="card highlight-gold">
-        <h2><i class="fa-solid fa-ticket"></i> Ingressos & Reservas</h2>
-        <div class="info-grid">
-            <div>
-                <strong>Ingressos importantes:</strong>
+            <div class="day"><span class="date-tag">01/01 · O coração da cidade</span>
                 <ul>
-                    <li><i class="fa-solid fa-gopuram"></i> <a href="https://ticketing.colosseo.it/es" target="_blank">Vaticano + Capela</a>: €25 adulto</li>
-                    <li><i class="fa-solid fa-building-columns"></i> <a href="https://www.colosseumdiroma-tickets.com/" target="_blank">Coliseu + Fórum + Palatino</a>: €24/pessoa</li>
-                    <li><i class="fa-solid fa-fountain"></i> <a href="https://villae.cultura.gov.it/en/opening-time-and-tickets" target="_blank">Tivoli (Villae Pass)</a>: €30/pessoa</li>
-                    <li><i class="fa-solid fa-gopuram"></i> <a href="https://milanoticket.com/" target="_blank">Duomo de Milão</a>: €26/pessoa</li>
+                    <li><i class="fa-solid fa-location-dot"></i>Puerta del Sol, Plaza Mayor e Mercado de San Miguel.
+                    </li>
+                    <li><i class="fa-solid fa-landmark"></i>Catedral de Almudena e Palácio Real.</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i>Chocolate com churros na San Ginés.</li>
                 </ul>
             </div>
-        </div>
-    </div>
-
-    <!-- DESTINO: MADRI -->
-    <div class="card">
-        <h2><i class="fa-solid fa-map-location-dot"></i> Etapa 1: Madri Encantada</h2>
-        <p><strong>Período:</strong> 31/12/2026 a 02/01/2027</p>
-        <p><strong>Hospedagem:</strong> Espahotel Plaza España</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Bem-vindo a Madri! Museus, praças e tapas: combinação perfeita para começar a viagem com energia. Aproveite a virada de ano com calma e planeje transporte para o aeroporto.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Comprar bilhetes para museus com antecedência; experimente churros em San Ginès; apps de táxi são úteis à noite.</div>
-
-        <span class="date-tag">31/12 - Arte e Modernidade</span>
-        <ul>
-            <li><i class="fa-solid fa-palette"></i> Triângulo da Arte: Reina Sofía, Prado e Thyssen-Bornemisza</li>
-            <li><i class="fa-solid fa-bag-shopping"></i> Compras na Gran Vía & Almoço no Mercado San Antón</li>
-            <li><i class="fa-solid fa-sun"></i> Pôr do sol no Parque Del Retiro</li>
-        </ul>
-
-        <span class="date-tag">01/01 - O Coração da Cidade</span>
-        <ul>
-            <li><i class="fa-solid fa-location-dot"></i> Puerta del Sol & Plaza Mayor</li>
-            <li><i class="fa-solid fa-utensils"></i> Tapas no Mercado de San Miguel</li>
-            <li><i class="fa-solid fa-gopuram"></i> Catedral de Almudena & Palácio Real</li>
-        </ul>
-    </div>
-
-    <!-- DESTINO: ROMA -->
-    <div class="card">
-        <h2><i class="fa-solid fa-gopuram"></i> Etapa 2: Roma Imperial</h2>
-        <p><strong>Período:</strong> 02/01/2027 a 06/01/2027</p>
-        <p><strong>Hospedagem:</strong> Domus Pontificia (Vaticano)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> A Cidade Eterna: ruínas, igrejas e pratos inesquecíveis. Caminhar é a melhor forma de explorar o centro histórico.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Reserve Coliseu e Vaticano online; leve sapatos confortáveis; cuidado com batedores de carteira em áreas turísticas.</div>
-
-        <span class="date-tag">02/01 - Boas-vindas</span>
-        <ul>
-            <li><i class="fa-solid fa-utensils"></i> Chegada e Jantar em Trastevere</li>
-        </ul>
-
-        <span class="date-tag">03/01 - Vaticano</span>
-        <ul>
-            <li><i class="fa-solid fa-gopuram"></i> Museus do Vaticano e Capela Sistina</li>
-            <li><i class="fa-solid fa-tree"></i> Piazza di Spagna, Jardim da Villa Borghese</li>
-        </ul>
-
-        <span class="date-tag">04/01 - Roma Antiga</span>
-        <ul>
-            <li><i class="fa-solid fa-building-columns"></i> Coliseu, Fórum Romano e Monte Palatino</li>
-            <li><i class="fa-solid fa-water-ladder"></i> Fontana di Trevi, Panteão, Piazza Navona</li>
-        </ul>
-
-        <span class="date-tag">05/01 - Tivoli</span>
-        <ul>
-            <li><i class="fa-solid fa-building-columns"></i> Vila Adriana</li>
-            <li><i class="fa-solid fa-utensils"></i> Ristorante Sibilla</li>
-            <li><i class="fa-solid fa-fountain"></i> Villa d'Este</li>
-        </ul>
-
-        <span class="date-tag">06/01 - Partindo para Toscana</span>
-        <ul>
-            <li><i class="fa-solid fa-bus"></i> <strong>Manhã:</strong> Partida para a Toscana 🍷</li>
-        </ul>
-    </div>
-
-    <!-- DESTINO: TOSCANA -->
-    <div class="card">
-        <h2><i class="fa-solid fa-wine-glass"></i> Etapa 3: Toscana</h2>
-        <p><strong>Período:</strong> 06/01/2027 a 11/01/2027</p>
-        <p><strong>Hospedagem:</strong> Hotel Santa Caterina (Siena)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Vinhedos, colinas e cidades medievais — o encanto da Toscana para quem ama paisagens e gastronomia.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Prove queijos e azeites locais; rotas entre cidades são curtas — aproveite para paradas para fotos.</div>
-
-        <span class="date-tag">06/01 - Val d'Orcia</span>
-        <ul>
-            <li><i class="fa-solid fa-wine-glass"></i> Montalcino (vinho Brunello)</li>
-            <li><i class="fa-solid fa-map"></i> Quirico d'Orcia</li>
-        </ul>
-
-        <span class="date-tag">07/01 - Montepulciano</span>
-        <ul>
-            <li><i class="fa-solid fa-hot-tub-person"></i> Bagno Vignoni</li>
-            <li><i class="fa-solid fa-cheese"></i> Pienza</li>
-        </ul>
-
-        <span class="date-tag">08/01 - Cidades Medievais</span>
-        <ul>
-            <li><i class="fa-solid fa-gopuram"></i> San Gimignano, Volterra, Montefioralle</li>
-            <li><i class="fa-solid fa-wine-bottle"></i> Castellina in Chianti</li>
-        </ul>
-
-        <span class="date-tag">11/01 - Florença & Partida</span>
-        <ul>
-            <li><i class="fa-solid fa-gopuram"></i> Duomo, Palazzo Vecchio, Mercato Centrale</li>
-            <li><i class="fa-solid fa-camera"></i> Pôr do sol na Piazzale Michelangelo</li>
-        </ul>
-    </div>
-
-    <!-- DESTINO: VENEZA / MESTRE -->
-    <div class="card">
-        <h2><i class="fa-solid fa-water"></i> Etapa 4: Veneza Romântica (Mestre)</h2>
-        <p><strong>Período:</strong> 11/01/2027 a 14/01/2027</p>
-        <p><strong>Hospedagem:</strong> A Definir (Mestre / Veneza)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Canais, ilhas coloridas e culinária incrível. Mestre é uma base prática para explorar Veneza sem os preços altos do centro.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Compre vaporetto passes; Burano e Murano são ótimas para compras de lembranças.</div>
-
-        <span class="date-tag">14/01 - Saída de Mestre</span>
-        <ul>
-            <li><i class="fa-solid fa-truck-field"></i> Embarque do grupo e partida para as próximas etapas</li>
-        </ul>
-    </div>
-
-    <!-- NOVO: DOLOMITAS -->
-    <div class="card highlight-sunny">
-        <h2><i class="fa-solid fa-mountain"></i> Etapa 5: Dolomitas</h2>
-        <p><strong>Período:</strong> 14/01/2027 a 16/01/2027</p>
-        <p><strong>Chegada:</strong> manhã • <strong>Partida:</strong> manhã (16/01)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Montanhas dramáticas, pequenas vilas alpinas e pistas para quem quer contemplar paisagens nevadas. Ótimo para passeios curtos, fotos e degustação de pratos regionais.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Levar roupas térmicas; verificar condições das estradas; provar polenta e speck locais. Se houver tempo, fazer um passeio de teleférico para vistas panorâmicas.</div>
-    </div>
-
-    <!-- NOVO: MADONNA DELLA CORONA -->
-    <div class="card">
-        <h2><i class="fa-solid fa-church"></i> Passeio: Madonna della Corona</h2>
-        <p><strong>Data:</strong> 16/01/2027</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Pequena igreja espetacularmente encaixada na face da montanha — ideal para uma caminhada curta e vistas inspiradoras.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Levar calçados confortáveis para a trilha; horário de visita e missas podem alterar acesso; ótimo ponto para fotos ao entardecer.</div>
-    </div>
-
-    <!-- ATUALIZADO: LAGO DE COMO (VARENNA / PERLEDO) -->
-    <div class="card">
-        <h2><i class="fa-solid fa-water"></i> Etapa 6: Lago de Como (Varenna / Perledo)</h2>
-        <p><strong>Período:</strong> 16/01/2027 a 18/01/2027</p>
-        <p><strong>Chegada:</strong> tarde (16/01) • <strong>Partida:</strong> noite (18/01)</p>
-        <p><strong>Parcheggio:</strong> Parcheggio Multipiano disponível em Varenna</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Lagos cristalinos, vilas pitorescas e rotas de ferry entre cidades. Varenna é tranquila e charmosa; Perledo tem vistas espetaculares.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Estacionamento pago no centro; verificar horários dos ferries (no inverno podem ser reduzidos); provar risotto e peixes locais.</div>
-
-        <span class="date-tag">16/01 - Chegada & Passeio noturno</span>
-        <ul>
-            <li><i class="fa-solid fa-walking"></i> Passeio pela beira do lago em Varenna</li>
-        </ul>
-
-        <span class="date-tag">17/01 - Lago & Villas</span>
-        <ul>
-            <li><i class="fa-solid fa-ship"></i> Ferry para Bellagio (se o tempo permitir)</li>
-            <li><i class="fa-solid fa-house-chimney"></i> Visita à Villa Monastero</li>
-        </ul>
-    </div>
-
-    <!-- ATUALIZADO: TIRANO - BATE E VOLTA SUÍÇA -->
-    <div class="card">
-        <h2><i class="fa-solid fa-train"></i> Etapa 7: Tirano & Suíça (bate e volta)</h2>
-        <p><strong>Período:</strong> 18/01/2027 (chegada noite) • 19/01/2027 (partida tarde)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Aproveite o trem Bernina (ou trecho local) para um bate e volta às paisagens suíças. Mesmo em viagem curta, as vistas valem muito.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Conferir trens panorâmicos; roupas quentes; comprar bilhetes com antecedência se for Bernina Express; levar adaptador de tomada para suíça (se necessário).</div>
-    </div>
-
-    <!-- ATUALIZADO: MILÃO -->
-    <div class="card">
-        <h2><i class="fa-solid fa-gopuram"></i> Etapa 8: Milão</h2>
-        <p><strong>Período:</strong> 19/01/2027 a 21/01/2027</p>
-        <p><strong>Chegada:</strong> noite (19/01) • <strong>Partida:</strong> tarde (21/01)</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Capital da moda, com ótimas opções de restaurantes e museus. Mais tempo para compras e relaxar antes do retorno.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Comprar ingresso para o Duomo com antecedência; Quadrilátero da Moda para quem gosta de compras; tranporte público eficiente.</div>
-
-        <span class="date-tag">Sugestões:</span>
-        <ul>
-            <li><i class="fa-solid fa-gopuram"></i> Duomo di Milano</li>
-            <li><i class="fa-solid fa-palette"></i> Pinacoteca di Brera</li>
-            <li><i class="fa-solid fa-utensils"></i> Jantar em Navigli</li>
-        </ul>
-    </div>
-
-    <!-- RETORNO: ROMA (Perto Aeroporto) -->
-    <div class="card">
-        <h2><i class="fa-solid fa-plane-departure"></i> Etapa 9: Retorno a Roma</h2>
-        <p><strong>Data:</strong> 21/01/2027</p>
-        <p><strong>Observação:</strong> Hospedagem próxima ao aeroporto para facilitar check-in/voo</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> No fim da viagem, priorizar descanso e logística do grupo — hotéis perto do aeroporto são convenientes para partidas noturnas/antecedentes.
-        </div>
-        <div class="tips"><strong>Dicas:</strong> Conferir transfer do hotel para aeroporto; arrumar malas com antecedência; verificar o tempo para evitar surpresas no trajeto.</div>
-    </div>
-
-    <!-- Últimos dias / partida -->
-    <div class="card">
-        <h2><i class="fa-solid fa-gopuram"></i> Etapa Final: Partida</h2>
-        <p><strong>Período:</strong> 21/01/2027 a 23/01/2027</p>
-        <div class="stage-description">
-            <i class="fa-solid fa-info-circle"></i> Últimos momentos da viagem — aproveitar com calma antes do voo de retorno.
-        </div>
-
-        <span class="date-tag">22/01 - Voltando para Casa</span>
-        <ul>
-            <li><i class="fa-solid fa-clock"></i> <strong>Manhã:</strong> Check-out do hotel</li>
-            <li><i class="fa-solid fa-plane"></i> <strong>20:20:</strong> Voo Roma ➔ Madri (Conexão)</li>
-            <li><i class="fa-solid fa-plane"></i> <strong>23:55:</strong> Voo Madri ➔ São Paulo</li>
-        </ul>
-
-        <span class="date-tag">23/01 - Chegada em Casa</span>
-        <ul>
-            <li><i class="fa-solid fa-home"></i> <strong>07:05:</strong> Chegada em São Paulo</li>
-            <li><i class="fa-solid fa-heart"></i> Fim de uma viagem memorável! Até a próxima aventura! 🇮🇹</li>
-        </ul>
-    </div>
-
-</div>
-
-<footer>
-    <p>Viagem Itália 2027 - Organização de Grupo | Se quiser, posso ajustar cores, adicionar mapas/links ou gerar uma versão para impressão.</p>
-</footer>
-
+        </section>
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-landmark-dome"></i></div>
+                <div>
+                    <h2>Roma Imperial</h2>
+                    <p class="period">02/01 a 06/01 · Domus Pontificia · Vaticano Prati</p>
+                </div>
+            </div>
+            <p class="stage-description">Roma pede sapatos confortáveis, uma pausa para gelato e reservas para Vaticano
+                e Coliseu. Cada esquina rende uma foto.</p>
+            <div class="day"><span class="date-tag">02/01 · Chegada</span>
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i>Jantar típico e caminhada leve por Trastevere.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">03/01 · Vaticano</span>
+                <ul>
+                    <li><i class="fa-solid fa-church"></i>Museus do Vaticano e Capela Sistina.</li>
+                    <li><i class="fa-solid fa-tree"></i>Piazza di Spagna e Villa Borghese.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">04/01 · Roma antiga</span>
+                <ul>
+                    <li><i class="fa-solid fa-building-columns"></i>Coliseu, Fórum Romano e Monte Palatino.</li>
+                    <li><i class="fa-solid fa-fountain"></i>Trevi, Panteão e Piazza Navona.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">05/01 · Bate e volta a Tivoli</span>
+                <ul>
+                    <li><i class="fa-solid fa-building-columns"></i>Villa Adriana, Villa d'Este e Santuário de Hércules
+                        Victor.</li>
+                    <li><i class="fa-solid fa-utensils"></i>Almoço no centro histórico, com vista para o Templo de
+                        Vesta.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">06/01 · Rumo à Toscana</span>
+                <ul>
+                    <li><i class="fa-solid fa-car-side"></i>Saída pela manhã para a Toscana. 🍷</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div>
+                    <h2>Toscana</h2>
+                    <p class="period">06/01 a 11/01 · Hotel Santa Caterina · Siena</p>
+                </div>
+            </div>
+            <p class="stage-description">Estradas cênicas, vilas medievais e sabores memoráveis. Deixe espaço no
+                planejamento para parar nos mirantes da Val d'Orcia.</p>
+            <div class="day"><span class="date-tag">06/01 · Val d'Orcia</span>
+                <ul>
+                    <li><i class="fa-solid fa-wine-glass"></i>Montalcino e Brunello; San Quirico d'Orcia.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">07/01 · Termas e colinas</span>
+                <ul>
+                    <li><i class="fa-solid fa-hot-tub-person"></i>Bagno Vignoni, Pienza e Montepulciano.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">08/01 · Cidades medievais</span>
+                <ul>
+                    <li><i class="fa-solid fa-tower-observation"></i>Montefioralle, San Gimignano, Volterra e Castellina
+                        in Chianti.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">09/01 · Siena sem pressa</span>
+                <ul>
+                    <li><i class="fa-solid fa-camera"></i>Piazza del Campo, Duomo e um café na cidade.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">10/01 · Pisa e Lucca</span>
+                <ul>
+                    <li><i class="fa-solid fa-building-columns"></i>Torre de Pisa e passeio de bicicleta pelas muralhas
+                        de Lucca.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">11/01 · Florença e saída</span>
+                <ul>
+                    <li><i class="fa-solid fa-church"></i>Duomo, Palazzo Vecchio, Mercato Centrale e Piazzale
+                        Michelangelo.</li>
+                    <li><i class="fa-solid fa-car-side"></i>Ao fim do dia, partida para Mestre/Veneza.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+                <div>
+                    <h2>Veneza Romântica</h2>
+                    <p class="period">11/01 a 14/01 · Mestre (hospedagem a definir)</p>
+                </div>
+            </div>
+            <p class="stage-description">Use Mestre como base e vá de trem até Veneza. Na ilha, esqueça o mapa por
+                alguns momentos: as ruelas e canais são a graça do passeio.</p>
+            <div class="day"><span class="date-tag">11/01 · Chegada à noite</span>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i>Acomodação e descanso.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">12/01 · Veneza clássica</span>
+                <ul>
+                    <li><i class="fa-solid fa-water"></i>Passeio pelos canais, Basílica de São Marcos e Palácio Ducal.
+                    </li>
+                    <li><i class="fa-solid fa-camera"></i>Dica: caminhar cedo pela Praça São Marcos para fotos mais
+                        tranquilas.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">13/01 · Ilhas da lagoa</span>
+                <ul>
+                    <li><i class="fa-solid fa-palette"></i>Burano (casas coloridas) e Murano (vidro soprado).</li>
+                    <li><i class="fa-solid fa-utensils"></i>Almoço em uma das ilhas.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">14/01 · Estrada para as Dolomitas</span>
+                <ul>
+                    <li><i class="fa-solid fa-car-side"></i>Saída de Mestre pela manhã.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#3976b9;--tint:#eaf3ff" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                <div>
+                    <h2>Dolomitas</h2>
+                    <p class="period">14/01 a 16/01 · Chegada pela manhã · saída pela manhã</p>
+                </div>
+            </div>
+            <p class="stage-description">A parte alpina da viagem: paisagens impressionantes e frio de verdade. Confira
+                condições das estradas e leve calçado aderente.</p>
+            <div class="day"><span class="date-tag">14/01 · Chegada e primeira vista</span>
+                <ul>
+                    <li><i class="fa-solid fa-camera"></i>Escolher um mirante próximo à hospedagem e curtir a luz do fim
+                        de tarde.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">15/01 · Dia nas montanhas</span>
+                <ul>
+                    <li><i class="fa-solid fa-mountain"></i>Explorar uma vila alpina, teleférico ou trilha curta,
+                        conforme o clima.</li>
+                    <li><i class="fa-solid fa-mug-hot"></i>Pausa obrigatória para chocolate quente ou almoço de
+                        montanha.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">16/01 · Próxima parada</span>
+                <ul>
+                    <li><i class="fa-solid fa-car-side"></i>Partida pela manhã rumo a Madonna della Corona.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#6c8c38;--tint:#f0f8dd" data-number="06">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-church"></i></div>
+                <div>
+                    <h2>Madonna della Corona</h2>
+                    <p class="period">16/01 · Passeio no caminho para o Lago de Como</p>
+                </div>
+            </div>
+            <p class="stage-description">O santuário encravado na montanha é uma parada especial. Reserve tempo para o
+                acesso a pé e vá preparado para o desnível.</p>
+            <div class="day"><span class="date-tag">16/01 · Visita e viagem</span>
+                <ul>
+                    <li><i class="fa-solid fa-person-walking"></i>Passeio pelo Santuário Madonna della Corona e
+                        mirantes.</li>
+                    <li><i class="fa-solid fa-car-side"></i>Saída à tarde para Varenna ou Perledo, no Lago de Como.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#168d9e;--tint:#e1f8f7" data-number="07">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+                <div>
+                    <h2>Lago de Como</h2>
+                    <p class="period">16/01 a 18/01 · Varenna ou Perledo · chegada à tarde</p>
+                </div>
+            </div>
+            <p class="stage-description">Dias para desacelerar à beira do lago. Varenna é ótima para caminhar e usar as
+                balsas entre os vilarejos.</p>
+            <div class="day"><span class="date-tag">16/01 · Chegada</span>
+                <ul>
+                    <li><i class="fa-solid fa-square-parking"></i>Usar o Parcheggio Multipiano conforme a base
+                        escolhida.</li>
+                    <li><i class="fa-solid fa-utensils"></i>Jantar com vista para o lago.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">17/01 · Vilarejos do lago</span>
+                <ul>
+                    <li><i class="fa-solid fa-ship"></i>Varenna, Bellagio e Menaggio de balsa, se a operação permitir.
+                    </li>
+                    <li><i class="fa-solid fa-camera"></i>Passarella degli Innamorati e jardins da Villa Monastero, em
+                        Varenna.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">18/01 · Rumo a Tirano</span>
+                <ul>
+                    <li><i class="fa-solid fa-train"></i>Partida à noite para Tirano.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#4d83d0;--tint:#eaf1ff" data-number="08">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-train-subway"></i></div>
+                <div>
+                    <h2>Tirano & Suíça</h2>
+                    <p class="period">18/01 a 19/01 · Trem panorâmico · bate e volta</p>
+                </div>
+            </div>
+            <p class="stage-description">Dia de trem e paisagens alpinas. Confirme previamente a rota, horários de
+                inverno e os documentos necessários para cruzar a fronteira.</p>
+            <div class="day"><span class="date-tag">18/01 · Chegada à noite</span>
+                <ul>
+                    <li><i class="fa-solid fa-bed"></i>Chegada a Tirano e descanso para o passeio de trem.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">19/01 · Suíça bate e volta</span>
+                <ul>
+                    <li><i class="fa-solid fa-train"></i>Passeio de trem saindo de Tirano em direção à Suíça.</li>
+                    <li><i class="fa-solid fa-camera"></i>Sentar do lado da janela e voltar à tarde para seguir a Milão.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#dd5072;--tint:#ffebf0" data-number="09">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-city"></i></div>
+                <div>
+                    <h2>Milão</h2>
+                    <p class="period">19/01 a 21/01 · Chegada à noite · saída à tarde</p>
+                </div>
+            </div>
+            <p class="stage-description">Fechamento urbano perfeito: arquitetura, aperitivo e vitrines. Reserve o Duomo
+                e, se desejarem, a Última Ceia com bastante antecedência.</p>
+            <div class="day"><span class="date-tag">19/01 · Chegada</span>
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i>Check-in e aperitivo milanês perto da hospedagem.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">20/01 · Centro histórico</span>
+                <ul>
+                    <li><i class="fa-solid fa-church"></i>Duomo, terraços e Galleria Vittorio Emanuele II.</li>
+                    <li><i class="fa-solid fa-masks-theater"></i>Teatro alla Scala e bairro Brera.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">21/01 · Despedida e Roma</span>
+                <ul>
+                    <li><i class="fa-solid fa-bag-shopping"></i>Últimas compras ou passeio tranquilo pela manhã.</li>
+                    <li><i class="fa-solid fa-plane-arrival"></i>À tarde, retorno a Roma e hospedagem próxima ao
+                        aeroporto.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="notice"><i class="fa-solid fa-lightbulb"></i><strong>Lembrete final:</strong> horários, preços,
+            regras de estacionamento, balsas e atrações podem mudar no inverno. Confiram tudo novamente antes de
+            reservar e deixem uma margem gostosa para imprevistos — os melhores momentos do grupo costumam aparecer aí.
+        </section>
+    </main>
+    <footer><strong>Viagem Itália 2027</strong> · feita para colecionar histórias, fotos e muitas mesas compartilhadas.
+        🍝</footer>
 </body>
+
 </html>
