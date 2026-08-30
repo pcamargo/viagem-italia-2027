@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murano & Burano | Guia do Passeio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root { --green:#078b62; --red:#e55055; --sun:#ffc95c; --blue:#4da6e8; --ink:#24313f; --cream:#fffaf1; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; background:radial-gradient(circle at 10% 8%,#ffe3a4 0,transparent 22rem),radial-gradient(circle at 90% 30%,#cdeeff 0,transparent 25rem),var(--cream); }
+    header { position:relative; overflow:hidden; padding:64px 20px 55px; text-align:center; color:#fff; background:linear-gradient(120deg,var(--green),#0caa80 48%,#f05a60 48%,var(--red)); }
+    header::before,header::after { position:absolute; content:""; width:180px; height:180px; border:18px solid #ffffff29; border-radius:50%; }
+    header::before { left:-65px; bottom:-105px; } header::after { right:-55px; top:-105px; }
+    .eyebrow { margin:0 0 9px; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    h1,h2,h3 { font-family:Fredoka,sans-serif; } h1 { margin:0; font-size:clamp(2.7rem,8vw,4.8rem); line-height:.95; letter-spacing:.02em; }
+    .subtitle { margin:14px 0 0; font-size:1.06rem; font-weight:500; }
+    .container { position:relative; max-width:1120px; margin:-28px auto 0; padding:0 20px 48px; }
+    .trip-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; overflow:hidden; border-radius:18px; box-shadow:0 12px 25px #24313f29; background:#24313f1a; }
+    .trip-strip div { padding:15px; text-align:center; background:#fff; font-size:.88rem; font-weight:700; } .trip-strip i { color:var(--red); margin-right:7px; }
+    .section-title { margin:46px 0 18px; font-size:1.7rem; } .section-title i { margin-right:8px; color:var(--red); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(245px,1fr)); gap:16px; }
+    .card { position:relative; overflow:hidden; margin-bottom:24px; padding:26px; border:1px solid #24313f14; border-top:6px solid var(--accent,var(--green)); border-radius:20px; background:#fffffff0; box-shadow:0 8px 22px #24313f14; }
+    .card::after { position:absolute; right:-18px; bottom:-34px; color:var(--accent,var(--green)); content:attr(data-number); font:700 8rem/1 Fredoka,sans-serif; opacity:.07; }
+    .card-head { position:relative; z-index:1; display:flex; align-items:flex-start; gap:14px; }
+    .place-icon { display:grid; flex:0 0 49px; width:49px; height:49px; place-items:center; border-radius:15px; color:#fff; background:var(--accent,var(--green)); font-size:1.35rem; }
+    h2 { margin:0; font-size:clamp(1.55rem,4vw,2rem); } .period { margin:5px 0 0; color:#637080; font-weight:700; font-size:.9rem; }
+    .description { position:relative; z-index:1; margin:18px 0; padding:13px 15px; border-radius:11px; color:#4c5966; line-height:1.55; background:var(--tint,#e3f7ef); }
+    .option { padding:20px; border-radius:17px; background:#fff; box-shadow:0 7px 18px #24313f12; } .option h3 { margin:0 0 10px; color:var(--accent,var(--red)); font-size:1.12rem; }
+    ul { margin:0; padding:0; list-style:none; } li { margin:8px 0; line-height:1.48; } li i { width:25px; color:var(--accent,var(--green)); text-align:center; }
+    .day { position:relative; z-index:1; padding:15px 0; border-top:1px dashed #d7dde1; } .day:first-of-type { border-top:0; }
+    .date-tag { display:block; margin-bottom:8px; color:var(--accent,var(--green)); font-weight:700; }
+    .notice { padding:17px 19px; border-radius:14px; color:#664b11; line-height:1.55; background:#fff2d1; } .notice i { color:#e99c00; margin-right:7px; }
+    footer { padding:34px 20px 46px; text-align:center; color:#637080; font-size:.9rem; } footer strong { color:var(--green); }
+    @media (max-width:580px) { header { padding-top:50px; } .container { padding:0 13px 35px; } .trip-strip { grid-template-columns:1fr; } .card { padding:20px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Veneza · Itália</p>
+    <h1>Murano &amp; Burano</h1>
+    <p class="subtitle">Um dia entre vidro, renda, canais e fachadas coloridas. ✨</p>
+  </header>
+
+  <main class="container">
+    <section class="trip-strip" aria-label="Resumo do passeio">
+      <div><i class="fa-solid fa-clock"></i>Dia inteiro · 6 a 8 horas</div>
+      <div><i class="fa-solid fa-ship"></i>Vaporetto ACTV</div>
+      <div><i class="fa-solid fa-location-dot"></i>Saída: Fondamente Nove</div>
+    </section>
+
+    <h2 class="section-title"><i class="fa-solid fa-ship"></i>Como chegar às ilhas</h2>
+    <section class="grid">
+      <article class="option" style="--accent:#078b62">
+        <h3><i class="fa-solid fa-water"></i> Por conta própria</h3>
+        <ul>
+          <li><i class="fa-solid fa-ticket"></i><strong>Passe ACTV de 24h:</strong> cerca de €25. Compensa a partir do terceiro embarque, pois a passagem avulsa custa por volta de €9,50.</li>
+          <li><i class="fa-solid fa-location-dot"></i><strong>Principal terminal:</strong> Fondamente Nove (F.te Nove), ao norte da ilha principal.</li>
+          <li><i class="fa-solid fa-route"></i><strong>Linha 12:</strong> Fondamente Nove → Murano → Burano (e Torcello).</li>
+          <li><i class="fa-solid fa-train-subway"></i><strong>Linhas 3, 4.1 e 4.2:</strong> conectam Santa Lucia ou Piazzale Roma diretamente a Murano.</li>
+        </ul>
+      </article>
+      <article class="option" style="--accent:#e55055">
+        <h3><i class="fa-solid fa-compass"></i> Tour guiado</h3>
+        <ul>
+          <li><i class="fa-solid fa-anchor"></i>Barcos privados saem geralmente de San Zaccaria, perto da Piazza San Marco, ou da estação de trem.</li>
+          <li><i class="fa-solid fa-euro-sign"></i><strong>Preço médio:</strong> €20 a €30 por pessoa.</li>
+          <li><i class="fa-solid fa-thumbs-up"></i><strong>Vantagem:</strong> logística e horários já resolvidos.</li>
+          <li><i class="fa-solid fa-clock"></i><strong>Atenção:</strong> o tempo livre em cada ilha tende a ser mais corrido.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i>Roteiro recomendado</h2>
+    <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="01">
+      <div class="card-head"><div class="place-icon"><i class="fa-solid fa-wine-bottle"></i></div><div><h2>Veneza → Murano</h2><p class="period">A ilha famosa pelo vidro · cerca de 15 minutos</p></div></div>
+      <p class="description">Saia de Fondamente Nove pela Linha 12 ou 4.1/4.2. A partir da estação de trem, a Linha 3 é uma alternativa prática. Reserve aproximadamente 2 horas para a visita.</p>
+      <div class="day"><span class="date-tag">O que vale fazer em Murano</span><ul><li><i class="fa-solid fa-fire"></i>Assistir a uma demonstração de sopro de vidro em uma <em>fornace</em>.</li><li><i class="fa-solid fa-water"></i>Passear pelas margens dos canais e visitar a Basílica Santi Maria e Donato.</li><li><i class="fa-solid fa-gem"></i>Ao comprar uma peça, procure o selo <strong>Vetro Artistico Murano</strong>.</li></ul></div>
+    </section>
+
+    <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="02">
+      <div class="card-head"><div class="place-icon"><i class="fa-solid fa-palette"></i></div><div><h2>Murano → Burano</h2><p class="period">Casas coloridas e renda artesanal · 30 a 35 minutos</p></div></div>
+      <p class="description">No porto Murano Faro, embarque na Linha 12 em direção a Burano. Planeje entre 2h30 e 3 horas para caminhar, fotografar e almoçar com calma.</p>
+      <div class="day"><span class="date-tag">O que vale fazer em Burano</span><ul><li><i class="fa-solid fa-camera"></i>Explorar as ruelas e registrar as fachadas coloridas.</li><li><i class="fa-solid fa-scissors"></i>Conhecer lojas tradicionais de renda artesanal (<em>merletto</em>).</li><li><i class="fa-solid fa-fish"></i>Almoçar frutos do mar ou provar o tradicional biscoito <strong>Bussolà</strong>.</li></ul></div>
+    </section>
+
+    <section class="card" style="--accent:#4d83d0;--tint:#eaf1ff" data-number="03">
+      <div class="card-head"><div class="place-icon"><i class="fa-solid fa-church"></i></div><div><h2>Opcional: Torcello</h2><p class="period">Uma pausa silenciosa a 5 minutos de Burano</p></div></div>
+      <p class="description">Para estender o passeio, siga pela Linha 9 ou 12 até Torcello. A ilha é quase inabitada, tranquila e conhecida pela Cattedrale di Santa Maria Assunta e seus mosaicos bizantinos.</p>
+    </section>
+
+    <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="04">
+      <div class="card-head"><div class="place-icon"><i class="fa-solid fa-rotate-left"></i></div><div><h2>Retorno a Veneza</h2><p class="period">Burano ou Torcello → Fondamente Nove</p></div></div>
+      <p class="description">Pegue a Linha 12 de volta até Fondamente Nove. O trajeto leva cerca de 45 a 50 minutos — uma boa chance para descansar e rever as fotos do dia.</p>
+    </section>
+
+    <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Dicas práticas</h2>
+    <section class="grid">
+      <article class="option" style="--accent:#2697c5"><h3>Comece cedo</h3><ul><li><i class="fa-solid fa-sun"></i>Embarque entre 8h30 e 9h para encontrar os barcos e as ruelas mais vazios.</li></ul></article>
+      <article class="option" style="--accent:#a45de5"><h3>Faça o caminho inverso</h3><ul><li><i class="fa-solid fa-arrow-right-arrow-left"></i>Se Murano estiver cheia, vá direto para Burano pela manhã e deixe Murano para o meio ou fim da tarde.</li></ul></article>
+      <article class="option" style="--accent:#e55055"><h3>Confira os dias</h3><ul><li><i class="fa-solid fa-calendar-xmark"></i>Muitas oficinas de Murano fecham aos domingos; algumas lojas de renda de Burano fecham às segundas.</li></ul></article>
+    </section>
+    <p class="notice"><i class="fa-solid fa-ticket"></i><strong>Antes de cada embarque:</strong> valide sempre o passe ACTV no leitor eletrônico. Assim, seu dia pelas ilhas começa sem nenhuma surpresa.</p>
+  </main>
+  <footer><strong>Murano &amp; Burano</strong> · um passeio para guardar em fotos, lembranças e pequenos tesouros de vidro. 🇮🇹</footer>
+</body>
+</html>
