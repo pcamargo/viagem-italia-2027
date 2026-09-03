@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tivoli | Roteiro Villae Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Bate e volta saindo de Roma</p>
+        <h1>Tivoli</h1>
+        <p class="subtitle">Ruínas imperiais, jardins renascentistas e um dia entre história e fontes. 🇮🇹</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-ticket"></i>Villae Pass · €30</div>
+            <div><i class="fa-solid fa-bus"></i>COTRAL + CAT</div>
+            <div><i class="fa-solid fa-train"></i>Retorno por trem</div>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-coins"></i>Orçamento estimado</h2>
+        <section class="grid">
+            <article class="quick-card" style="--accent:#078b62">
+                <h3>Villae Pass</h3>
+                <p><strong>€30,00</strong><br>Para as atrações do roteiro.</p>
+            </article>
+            <article class="quick-card" style="--accent:#2697c5">
+                <h3>Ônibus COTRAL</h3>
+                <p><strong>€2,20</strong><br>Trajeto Roma → Tivoli.</p>
+            </article>
+            <article class="quick-card" style="--accent:#d68a18">
+                <h3>Ônibus CAT</h3>
+                <p><strong>€1,50</strong><br>Deslocamento local.</p>
+            </article>
+            <article class="quick-card" style="--accent:#e55055">
+                <h3>Trem de volta</h3>
+                <p><strong>€3,00</strong><br>Tivoli → Roma Tiburtina.</p>
+            </article>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-route"></i>Roteiro passo a passo</h2>
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-train-subway"></i></div>
+                <div>
+                    <h2>Partida: Ponte Mammolo</h2>
+                    <p class="period">Metrô Linha B (azul) → terminal COTRAL</p>
+                </div>
+            </div>
+            <p class="description">Desça na estação Ponte Mammolo. Ao sair do metrô, siga as placas “Bus” para encontrar
+                o terminal COTRAL e o ônibus azul em direção a Tivoli.</p>
+            <ul>
+                <li><i class="fa-solid fa-ticket"></i>No andar térreo, procure o bar/tabacaria à esquerda para comprar
+                    os bilhetes de ida e volta.</li>
+                <li><i class="fa-solid fa-arrow-up"></i>Suba as escadas rolantes à direita até o primeiro andar, onde
+                    fica o terminal COTRAL.</li>
+            </ul>
+        </section>
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div>
+                    <h2>Villa Adriana</h2>
+                    <p class="period">Primeira parada · reserve cerca de 3 horas</p>
+                </div>
+            </div>
+            <p class="description">Desça no ponto da Villa Adriana e explore as ruínas da residência do imperador
+                Adriano. Compre o Villae Pass na bilheteria antes de começar a visita.</p>
+            <p class="notice"><i class="fa-solid fa-clock"></i><strong>Tempo sugerido:</strong> 3 horas para caminhar
+                com calma pelo sítio arqueológico.</p>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="🍝">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                    <h2>
+                        Almoço: <a href="https://www.ristoranteilciocco.com/en/restaurant.html">Il Ciocco.</a>
+                    </h2>
+                    <p class="period">Via Ponte Gregoriano, 33</p>
+                </div>
+            </div>
+            <p class="description">Uma escolha prática para 10 pessoas: ristorante-pizzeria com massas frescas, pratos
+                de carne, peixe e pizzas. Assim o grupo almoça antes de seguir para o centro histórico, sem depender de
+                uma refeição rápida demais.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#e55055">
+                    <h3>Preço e pratos</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-euro-sign"></i><strong>Média:</strong> cerca de €30 por pessoa, sem
+                            bebidas.</li>
+                        <li><i class="fa-solid fa-bowl-food"></i>Massas caseiras, como tortelloni e rigatone alla
+                            gricia, aparecem no menu.</li>
+                        <li><i class="fa-solid fa-pizza-slice"></i>Pizzas dão flexibilidade para crianças e diferentes
+                            apetites.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#e55055">
+                    <h3>Para o grupo</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i><strong>Reserve:</strong> +39 0774 534913 ou +39 393
+                            9165841.</li>
+                        <li><i class="fa-solid fa-clock"></i>Almoço das 12h às 15h30; fechado às quartas-feiras.</li>
+                        <li><i class="fa-solid fa-users"></i>Avise que são 10 pessoas e peça uma mesa única, de
+                            preferência para 12h30–13h.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-columns"></i></div>
+                <div>
+                    <h2>Santuário de Hércules Victor</h2>
+                    <p class="period">Ônibus local CAT · Linha 4</p>
+                </div>
+            </div>
+            <p class="description">Na rua principal, embarque no ônibus laranja CAT Linha 4 e desça no Santuário. A
+                construção romana é uma obra monumental de engenharia, às portas do centro histórico.</p>
+            <p class="notice"><i class="fa-solid fa-bus"></i><strong>Bilhete local:</strong> €1,50.</p>
+        </section>
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-fountain"></i></div>
+                <div>
+                    <h2>Villa d’Este</h2>
+                    <p class="period">Centro histórico · caminhada de aproximadamente 10 min</p>
+                </div>
+            </div>
+            <p class="description">Siga a pé até o centro e descubra os jardins e fontes renascentistas da Villa d’Este.
+                A Fontana dell’Organo é uma das paradas imperdíveis.</p>
+            <p class="notice"><i class="fa-solid fa-ticket"></i><strong>Entrada:</strong> incluída no Villae Pass.</p>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-train"></i></div>
+                <div>
+                    <h2>Volta para Roma</h2>
+                    <p class="period">Estação de Tivoli → Roma Tiburtina</p>
+                </div>
+            </div>
+            <p class="description">Caminhe cerca de 15 minutos até a estação ferroviária de Tivoli e pegue o trem de
+                volta para Roma Tiburtina.</p>
+            <p class="notice"><i class="fa-solid fa-circle-check"></i><strong>Lembrete:</strong> valide o bilhete físico
+                antes de embarcar.</p>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Dicas que fazem diferença</h2>
+        <section class="grid">
+            <article class="quick-card" style="--accent:#2697c5">
+                <h3>Bilhetes e entrada</h3>
+                <ul>
+                    <li><i class="fa-solid fa-ticket"></i>Confiram os horários oficiais e comprem os ingressos com
+                        antecedência: em dias movimentados, o acesso às Villas pode ser controlado por faixa horária.
+                    </li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#d68a18">
+                <h3>Ritmo do dia</h3>
+                <ul>
+                    <li><i class="fa-solid fa-shoe-prints"></i>As ruínas e jardins envolvem bastante caminhada. Calçado
+                        aderente, garrafa d’água e uma pausa de almoço sem pressa ajudam o grupo a aproveitar até o fim.
+                    </li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#078b62">
+                <h3>Curiosidade</h3>
+                <ul>
+                    <li><i class="fa-solid fa-fountain"></i>A Villa d’Este é célebre pelo sofisticado sistema hidráulico
+                        renascentista: muitas fontes funcionam pela força da gravidade, sem bombas modernas.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer><strong>Tivoli</strong> · um dia para atravessar séculos de história italiana. 🇮🇹</footer>
+</body>
+
+</html>
