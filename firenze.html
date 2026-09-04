@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Florença em 1 Dia | Roteiro com Estacionamento Seguro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55;
+            margin-bottom: 24px
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Siena · Florença · Mestre</p>
+        <h1>Um dia em Florença</h1>
+        <p class="subtitle">Cúpulas majestosas, arte renascentista, pôr do sol inesquecível e partida rumo ao norte. 🎨🌅</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-clock"></i>08:00 a 18:30+</div>
+            <div><i class="fa-solid fa-car"></i>Carro + Bonde T1</div>
+            <div><i class="fa-solid fa-suitcase"></i>Malas Seguras no Carro</div>
+        </section>
+
+        <p class="notice"><i class="fa-solid fa-shield-halved"></i><strong>Solução Prática de Estacionamento:</strong> Entrar no centro histórico de Florença de carro é arriscado devido à ZTL. O <strong>Parcheggio Villa Costanza</strong> fica na rodovia A1, é monitorado, seguro para deixar as malas no porta-malas e possui acesso direto ao Bonde T1 para o centro.</p>
+
+        <h2 class="section-title"><i class="fa-solid fa-route"></i>Roteiro do dia</h2>
+
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-car-side"></i></div>
+                <div>
+                    <h2>Check-out e Viagem a Florença</h2>
+                    <p class="period">08:00–09:15 · De Siena ao Parcheggio Villa Costanza</p>
+                </div>
+            </div>
+            <p class="description">Faça o check-out no Hotel Santa Caterina em Siena e pegue a estrada rumo ao norte até o estacionamento estratégico na rodovia A1.</p>
+        </section>
+
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-train-tram"></i></div>
+                <div>
+                    <h2>Estacionamento e Transfer ao Centro</h2>
+                    <p class="period">09:15–09:45 · Transição para o Bonde T1</p>
+                </div>
+            </div>
+            <p class="description">Estacione o carro, certifique-se de deixar as malas trancadas no porta-malas e embarque no Bonde T1 (Tramvia) até a estação central de Florença.</p>
+            <ul>
+                <li><i class="fa-solid fa-ticket"></i>Compre o bilhete por menos de €2,00 na própria estação do estacionamento.</li>
+                <li><i class="fa-solid fa-clock"></i>O trajeto até a estação Santa Maria Novella dura apenas 20 minutos.</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div>
+                    <h2>Manhã de Ouro no Centro Histórico</h2>
+                    <p class="period">09:45–12:30 · Caminhada monumental a pé</p>
+                </div>
+            </div>
+            <p class="description">Desembarque no coração de Florença e explore os maiores ícones arquitetônicos da cidade em um trajeto a pé contínuo.</p>
+            <div class="day"><span class="date-tag">Pontos do Roteiro</span>
+                <ul>
+                    <li><i class="fa-solid fa-church"></i><strong>Complexo do Duomo:</strong> Admire a imponente Catedral de Santa Maria del Fiore e a cúpula de Brunelleschi.</li>
+                    <li><i class="fa-solid fa-walkie-talkie"></i><strong>Via dei Calzaiuoli:</strong> Caminhe por uma das ruas mais emblemáticas de Florença.</li>
+                    <li><i class="fa-solid fa-monument"></i><strong>Piazza della Signoria:</strong> Veja o Palazzo Vecchio e as estátuas ao ar livre.</li>
+                    <li><i class="fa-solid fa-bridge"></i><strong>Ponte Vecchio:</strong> Finalize a caminhada matutina na famosa ponte de pedra sobre o rio Arno.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                    <h2>Opções de Almoço</h2>
+                    <p class="period">12:30–14:30 · Refeição tradicional ou rápida no passeio</p>
+                </div>
+            </div>
+            <p class="description">Escolha entre sentar em uma trattoria típica ou pegar um sanduíche rápido para não perder tempo de caminhada.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>All'Antico Vinaio (Rápido)</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-sandwich"></i><strong>Schiacciata toscana:</strong> O sanduíche mais famoso do mundo.</li>
+                        <li><i class="fa-solid fa-bolt"></i>Filas longas, mas que andam super rápido.</li>
+                        <li><i class="fa-solid fa-piggy-bank"></i>Custo-benefício imbatível para comer caminhando.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Trattoria Anita (Sentado)</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>Via Parlascio, 2R (atrás do Palazzo Vecchio).</li>
+                        <li><i class="fa-solid fa-bowl-food"></i>Massa caseira e carnes toscanas fartas.</li>
+                        <li><i class="fa-solid fa-chair"></i>Ambiente rústico e acolhedor para almoçar com calma.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-ice-cream"></i></div>
+                <div>
+                    <h2>Tarde Cultural, Couro e Gelato</h2>
+                    <p class="period">14:30–16:30 · Tradição e passeios pelas margens do Arno</p>
+                </div>
+            </div>
+            <p class="description">Explore as margens do rio Arno, o comércio artesanal e os sabores locais de Florença.</p>
+            <ul>
+                <li><i class="fa-solid fa-store"></i><strong>Mercado do Porcellino:</strong> Visite o mercado de couro e esfregue o focinho do porco de bronze para garantir boa sorte e o retorno à cidade.</li>
+                <li><i class="fa-solid fa-ice-cream"></i><strong>Gelateria dei Neri:</strong> Saboreie um autêntico gelato artesanal italiano.</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#ffc95c;--tint:#fff8e7" data-number="06">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-sun"></i></div>
+                <div>
+                    <h2>Pôr do Sol no Piazzale Michelangelo</h2>
+                    <p class="period">16:30–17:45 · O mirante mais espetacular da cidade</p>
+                </div>
+            </div>
+            <p class="description">Suba até a famosa praça panorâmica para ter uma vista inesquecível do horizonte florentino.</p>
+            <ul>
+                <li><i class="fa-solid fa-camera"></i>Sente-se nos degraus de pedra e aproveite os músicos de rua que costumam tocar por ali.</li>
+                <li><i class="fa-solid fa-city"></i>Contemple Florença inteira, o rio Arno e a Cúpula do Duomo ganhando tons de dourado e laranja no fim do dia.</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="07">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-road"></i></div>
+                <div>
+                    <h2>Retorno ao Carro e Partida para Mestre</h2>
+                    <p class="period">17:45 em diante · Viagem rumo ao norte</p>
+                </div>
+            </div>
+            <p class="description">Pegue o Bonde T1 na estação Santa Maria Novella de volta ao Parcheggio Villa Costanza (17h45–18h15) e siga viagem pela rodovia A1 em direção a Mestre, cruzando os Apeninos por Bolonha e Pádua.</p>
+        </section>
+
+    </main>
+    <footer><strong>Florença em 1 dia</strong> · arte, gastronomia, vistas douradas e a transição perfeita rumo ao norte da Itália. 🇮🇹</footer>
+</body>
+
+</html>
