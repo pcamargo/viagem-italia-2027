@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siena em 1 Dia | Roteiro a Pé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Siena · Toscana · A pé</p>
+        <h1>Um dia em Siena</h1>
+        <p class="subtitle">Mármore, contrade, vistas medievais e uma mesa toscana inesquecível. 🏰</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-clock"></i>09:00 a 21:30</div>
+            <div><i class="fa-solid fa-shoe-prints"></i>Roteiro inteiramente a pé</div>
+            <div><i class="fa-solid fa-hotel"></i>Hotel Santa Caterina</div>
+        </section>
+        <p class="notice"><i class="fa-solid fa-shoe-prints"></i><strong>Dica de ouro:</strong> Siena é cheia de
+            subidas, descidas e paralelepípedos. Use o calçado mais confortável e aderente da mala para aproveitar o dia
+            sem sofrimento.</p>
+        <h2 class="section-title"><i class="fa-solid fa-route"></i>Roteiro do dia</h2>
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-door-open"></i></div>
+                <div>
+                    <h2>Porta Romana e Duomo</h2>
+                    <p class="period">09:00–11:30 · Começo pela Siena medieval</p>
+                </div>
+            </div>
+            <p class="description">Saia do hotel pela Porta Romana e suba a Via di San Martino em direção ao centro.
+                Chegue cedo à Piazza del Duomo: ela merece ser a estrela do dia.</p>
+            <div class="day"><span class="date-tag">09:30–11:30 · Complexo do Duomo</span>
+                <ul>
+                    <li><i class="fa-solid fa-ticket"></i>Compre o OPA SI PASS com antecedência para reduzir filas.</li>
+                    <li><i class="fa-solid fa-church"></i>Visite a Catedral, a Livraria Piccolomini e o Batistério.</li>
+                    <li><i class="fa-solid fa-eye"></i>Suba ao Panorama dal Facciatone para uma das melhores vistas
+                        aéreas de Siena.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-paw"></i></div>
+                <div>
+                    <h2>Becos e Contrade</h2>
+                    <p class="period">11:30–12:30 · Uma hora sem mapa</p>
+                </div>
+            </div>
+            <p class="description">Caminhe sem rumo pelas ruelas de pedra ao redor do Duomo. Os animais e emblemas nas
+                paredes representam as Contrade, bairros históricos que competem no Palio di Siena.</p>
+            <ul>
+                <li><i class="fa-solid fa-paw"></i>Procure a loba, a águia e a tartaruga — cada símbolo conta uma
+                    história da cidade.</li>
+            </ul>
+        </section>
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                    <h2>Almoço toscano</h2>
+                    <p class="period">12:30–14:30 · Próximo à Piazza del Campo</p>
+                </div>
+            </div>
+            <p class="description">Siga em direção à praça principal para uma pausa longa antes da programação da tarde.
+            </p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#d68a18">
+                    <h3>Osteria il Carroccio</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-bowl-food"></i>Boa pedida para Pici cacio e pepe e vitelo toscano.
+                        </li>
+                        <li><i class="fa-solid fa-users"></i>Para o grupo, reservem antecipadamente e confirmem uma
+                            única mesa.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#d68a18">
+                    <h3>Ritmo ideal</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-mug-hot"></i>Guardem tempo para café e sobremesa: a tarde terá escadas
+                            e muitas caminhadas.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-landmark"></i></div>
+                <div>
+                    <h2>Piazza del Campo</h2>
+                    <p class="period">14:30–16:30 · Palazzo Pubblico e Torre del Mangia</p>
+                </div>
+            </div>
+            <p class="description">A praça em forma de concha recebe o Palio. Sente-se nos tijolos vermelhos, observe a
+                arquitetura e escolha a experiência que combina melhor com o grupo.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Com fôlego</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-stairs"></i>Suba os mais de 400 degraus da Torre del Mangia para outra
+                            vista espetacular.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Com calma</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-palette"></i>Visite o museu do Palazzo Pubblico e os afrescos do Bom e
+                            do Mau Governo.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-church"></i></div>
+                <div>
+                    <h2>San Domenico, aperitivo e compras</h2>
+                    <p class="period">16:30–19:00 · Cartão-postal, doces e pôr do sol</p>
+                </div>
+            </div>
+            <div class="day"><span class="date-tag">Basílica di San Domenico</span>
+                <ul>
+                    <li><i class="fa-solid fa-cross"></i>Visite as relíquias de Santa Catarina de Siena.</li>
+                    <li><i class="fa-solid fa-camera"></i>O mirante ao lado oferece a clássica vista do Duomo no alto da
+                        colina.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">Via di Città e Piazza del Campo</span>
+                <ul>
+                    <li><i class="fa-solid fa-cookie-bite"></i>Compre Panforte ou Ricciarelli na confeitaria Nannini.
+                    </li>
+                    <li><i class="fa-solid fa-wine-glass"></i>Feche a tarde com um Spritz ou uma taça de vinho em um
+                        café da praça.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="06">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div>
+                    <h2>Jantar especial</h2>
+                    <p class="period">19:30 · Taverna di San Giuseppe</p>
+                </div>
+            </div>
+            <p class="description">A escolha principal para fechar o dia é a Taverna di San Giuseppe: uma instituição de
+                Siena instalada em uma construção do século XI, com pedra exposta, arcos medievais e adega escavada no
+                tufo.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#078b62">
+                    <h3>O que pedir</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-bowl-food"></i>Pici Verdi all’Etrusca, com ervas selvagens e molho
+                            rústico.</li>
+                        <li><i class="fa-solid fa-fire"></i>Bistecca alla Fiorentina.</li>
+                        <li><i class="fa-solid fa-gem"></i>Massas com trufas frescas raladas na hora.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#078b62">
+                    <h3>Logística do grupo</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>Via di Giovanni Duprè, perto da Piazza del Campo e
+                            na rota de volta ao hotel pela Contrada dell’Onda.</li>
+                        <li><i class="fa-solid fa-calendar-check"></i>Para um grupo grande, façam reserva pelo site
+                            oficial com bastante antecedência.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <p class="notice"><i class="fa-solid fa-moon"></i><strong>21:30 · Retorno ao hotel:</strong> desçam sem pressa
+            até o Hotel Santa Caterina sob a iluminação das lanternas medievais. O Ristorante Guidoriccio é uma boa
+            alternativa caso não haja mesa na Taverna.</p>
+    </main>
+    <footer><strong>Siena em 1 dia</strong> · uma cidade para ser caminhada, saboreada e lembrada. 🇮🇹</footer>
+</body>
+
+</html>

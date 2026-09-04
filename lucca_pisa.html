@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bate-Volta: Lucca e Pisa | Roteiro de Carro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55;
+            margin-bottom: 24px;
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Bate-Volta · Saindo de Siena · De Carro</p>
+        <h1>Lucca e Pisa</h1>
+        <p class="subtitle">Muralhas renascentistas, praças históricas e a famosa torre inclinada. 🏰📐</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-clock"></i>08:00 a 18:15</div>
+            <div><i class="fa-solid fa-car"></i>Bate-Volta de Carro</div>
+            <div><i class="fa-solid fa-location-dot"></i>Saída: Hotel Santa Caterina</div>
+        </section>
+
+        <p class="notice"><i class="fa-solid fa-triangle-exclamation"></i><strong>Atenção à ZTL (Zona de Tráfego Limitado):</strong> Lucca e Pisa possuem fiscalização eletrônica rigorosa. Estacione sempre nos bolsões sugeridos fora das muralhas para evitar multas graves.</p>
+
+        <h2 class="section-title"><i class="fa-solid fa-route"></i>Roteiro do dia</h2>
+
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-car-side"></i></div>
+                <div>
+                    <h2>Saída de Siena para Lucca</h2>
+                    <p class="period">08:00–09:45 · Viagem de ida</p>
+                </div>
+            </div>
+            <p class="description">Saia cedo do Hotel Santa Caterina rumo ao norte da Toscana. A viagem até Lucca dura cerca de 1h45 e cruza paisagens belíssimas da região.</p>
+        </section>
+
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h2>Lucca: A Joia Amuralhada</h2>
+                    <p class="period">09:45–14:00 · Pedale nas muralhas e explore o centro</p>
+                </div>
+            </div>
+            <p class="description">Uma cidade plana, segura e cercada por uma imponente muralha renascentista totalmente preservada.</p>
+            
+            <div class="day"><span class="date-tag">Estacionamento Sugerido</span>
+                <ul>
+                    <li><i class="fa-solid fa-square-parking"></i><strong>Parcheggio Carducci:</strong> Localizado do lado de fora das muralhas, em frente à Porta San Pietro. Seguro e fora da ZTL.</li>
+                </ul>
+            </div>
+
+            <div class="day"><span class="date-tag">O que fazer</span>
+                <ul>
+                    <li><i class="fa-solid fa-bicycle"></i>Alugue uma bicicleta na entrada e faça a volta completa pelo topo da muralha (4 km).</li>
+                    <li><i class="fa-solid fa-monument"></i>Caminhe até a Piazza dell'Anfiteatro e suba os degraus da Torre Guinigi para ver as árvores no topo.</li>
+                </ul>
+            </div>
+
+            <div class="day"><span class="date-tag">Sugestão de Almoço</span>
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i><strong>Trattoria Da Leo:</strong> Rústica, tradicional e acolhedora. Destaque para o <em>Tordelli Lucchesi</em> (massa artesanal recheada com carne).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-route"></i></div>
+                <div>
+                    <h2>Deslocamento para Pisa</h2>
+                    <p class="period">14:00–14:30 · Trajeto curto entre as cidades</p>
+                </div>
+            </div>
+            <p class="description">A viagem entre Lucca e Pisa é rápida e direta, durando aproximadamente 30 minutos.</p>
+        </section>
+
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-tower-observation"></i></div>
+                <div>
+                    <h2>Piazza dei Miracoli em Pisa</h2>
+                    <p class="period">14:30–16:30 · O complexo monumental de Pisa</p>
+                </div>
+            </div>
+            <p class="description">O ponto central da visita a Pisa. Duas horas são ideais para contemplar a praça, tirar fotos e visitar os monumentos.</p>
+
+            <div class="day"><span class="date-tag">Estacionamento Sugerido</span>
+                <ul>
+                    <li><i class="fa-solid fa-square-parking"></i><strong>Parcheggio Piazza Duomo:</strong> Apenas 250 metros da Torre Inclinada. Vagas de rua (faixa azul) fora da ZTL.</li>
+                </ul>
+            </div>
+
+            <div class="day"><span class="date-tag">Atrações Principais</span>
+                <ul>
+                    <li><i class="fa-solid fa-camera"></i>Garantir as clássicas fotos com a Torre Inclinada no gramado da praça.</li>
+                    <li><i class="fa-solid fa-church"></i>Visitar a Catedral (Duomo de Pisa) e admirar a arquitetura do Batistério.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <div>
+                    <h2>Retorno a Siena</h2>
+                    <p class="period">16:30–18:15 · Fim da jornada</p>
+                </div>
+            </div>
+            <p class="description">Saída de Pisa em direção ao sul para o regresso a Siena.</p>
+            <ul>
+                <li><i class="fa-solid fa-hotel"></i>Chegada prevista ao Hotel Santa Caterina às 18:15, a tempo de descansar antes do jantar.</li>
+            </ul>
+        </section>
+
+        <h2 class="section-title"><i class="fa-solid fa-square-parking"></i>Resumo dos Estacionamentos</h2>
+        <div class="grid" style="position:relative;z-index:1">
+            <article class="quick-card" style="--accent:#2697c5">
+                <h3>Lucca</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><strong>Parcheggio Carducci</strong></li>
+                    <li><i class="fa-solid fa-circle-info"></i>Fora da muralha (Porta San Pietro)</li>
+                    <li><i class="fa-solid fa-coins"></i>~ €1,50 a €2,00 / hora</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#a45de5">
+                <h3>Pisa</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><strong>Parcheggio Piazza Duomo</strong></li>
+                    <li><i class="fa-solid fa-circle-info"></i>A 250m da Torre Inclinada</li>
+                    <li><i class="fa-solid fa-coins"></i>~ €2,00 / hora</li>
+                </ul>
+            </article>
+        </div>
+
+    </main>
+    <footer><strong>Lucca e Pisa em 1 dia</strong> · história, arquitetura e charme no norte da Toscana. 🇮🇹</footer>
+</body>
+
+</html>

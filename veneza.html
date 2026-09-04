@@ -1,39 +1,472 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Veneza em 1 Dia | Roteiro do Grupo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <style>
-    :root{--green:#078b62;--red:#e55055;--sun:#ffc95c;--blue:#4da6e8;--ink:#24313f;--cream:#fffaf1}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:"DM Sans",sans-serif;background:radial-gradient(circle at 10% 8%,#ffe3a4 0,transparent 22rem),radial-gradient(circle at 90% 30%,#cdeeff 0,transparent 25rem),var(--cream)}header{position:relative;overflow:hidden;padding:64px 20px 55px;text-align:center;color:#fff;background:linear-gradient(120deg,var(--green),#0caa80 48%,#f05a60 48%,var(--red))}header:before,header:after{position:absolute;content:"";width:180px;height:180px;border:18px solid #ffffff29;border-radius:50%}header:before{left:-65px;bottom:-105px}header:after{right:-55px;top:-105px}.eyebrow{margin:0 0 9px;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}h1,h2,h3{font-family:Fredoka,sans-serif}h1{margin:0;font-size:clamp(2.7rem,8vw,4.8rem);line-height:.95;letter-spacing:.02em}.subtitle{margin:14px 0 0;font-size:1.06rem;font-weight:500}.container{max-width:1120px;margin:-28px auto 0;padding:0 20px 48px;position:relative}.trip-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;overflow:hidden;border-radius:18px;box-shadow:0 12px 25px #24313f29;background:#24313f1a}.trip-strip div{padding:15px;text-align:center;background:#fff;font-size:.88rem;font-weight:700}.trip-strip i{color:var(--red);margin-right:7px}.section-title{margin:46px 0 18px;font-size:1.7rem}.section-title i{margin-right:8px;color:var(--red)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px}.card{position:relative;overflow:hidden;border-radius:20px;padding:26px;margin-bottom:24px;border:1px solid #24313f14;border-top:6px solid var(--accent,var(--green));background:#fffffff0;box-shadow:0 8px 22px #24313f14}.card:after{position:absolute;right:-18px;bottom:-34px;color:var(--accent,var(--green));content:attr(data-number);font:700 8rem/1 Fredoka,sans-serif;opacity:.07}.card-head{display:flex;align-items:flex-start;gap:14px;position:relative;z-index:1}.place-icon{flex:0 0 49px;width:49px;height:49px;display:grid;place-items:center;border-radius:15px;color:#fff;background:var(--accent,var(--green));font-size:1.35rem}h2{margin:0;font-size:clamp(1.55rem,4vw,2rem)}.period{margin:5px 0 0;color:#637080;font-weight:700;font-size:.9rem}.description{position:relative;z-index:1;margin:18px 0;padding:13px 15px;border-radius:11px;color:#4c5966;line-height:1.55;background:var(--tint,#e3f7ef)}.day{position:relative;z-index:1;padding:14px 0;border-top:1px dashed #d7dde1}.day:first-of-type{border-top:0}.date-tag{display:block;margin-bottom:8px;color:var(--accent,var(--green));font-weight:700}ul{margin:0;padding:0;list-style:none}li{margin:8px 0;line-height:1.48}li i{width:25px;color:var(--accent,var(--green));text-align:center}.quick-card{padding:20px;border-radius:17px;background:#fff;box-shadow:0 7px 18px #24313f12}.quick-card h3{margin:0 0 10px;color:var(--accent,var(--red));font-size:1.12rem}.notice{padding:17px 19px;border-radius:14px;background:#fff2d1;color:#664b11;line-height:1.55}.notice i{color:#e99c00;margin-right:7px}footer{padding:34px 20px 46px;text-align:center;color:#637080;font-size:.9rem}footer strong{color:var(--green)}@media(max-width:580px){header{padding-top:50px}.container{padding:0 13px 35px}.trip-strip{grid-template-columns:1fr}.card{padding:20px}}
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veneza em 1 Dia | Roteiro do Grupo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95;
+            letter-spacing: .02em
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .section-title i {
+            margin-right: 8px;
+            color: var(--red)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border: 1px solid #24313f14;
+            border-top: 6px solid var(--accent, var(--green));
+            background: #fffffff0;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px;
+            background: #fff;
+            box-shadow: 0 7px 18px #24313f12
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header><p class="eyebrow">Veneza · Itália · Grupo de 10</p><h1>Veneza em 1 dia</h1><p class="subtitle">Canais, pontes, gelato e uma rota leve para toda a família. 🇮🇹</p></header>
-  <main class="container">
-    <section class="trip-strip" aria-label="Resumo do roteiro"><div><i class="fa-solid fa-users"></i>10 pessoas · 2 crianças</div><div><i class="fa-solid fa-train"></i>Venezia Santa Lucia</div><div><i class="fa-solid fa-route"></i>Rota linear e sem pressa</div></section>
+    <header>
+        <p class="eyebrow">Veneza · Itália · Grupo de 10</p>
+        <h1>Veneza em 1 dia</h1>
+        <p class="subtitle">Canais, pontes, gelato e uma rota leve para toda a família. 🇮🇹</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip" aria-label="Resumo do roteiro">
+            <div><i class="fa-solid fa-users"></i>10 pessoas · 2 crianças</div>
+            <div><i class="fa-solid fa-train"></i>Venezia Santa Lucia</div>
+            <div><i class="fa-solid fa-route"></i>Rota linear e sem pressa</div>
+        </section>
 
-    <h2 class="section-title"><i class="fa-solid fa-clock"></i>Cronograma do dia</h2>
-    <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="AM"><div class="card-head"><div class="place-icon"><i class="fa-solid fa-sun"></i></div><div><h2>Manhã em Cannaregio</h2><p class="period">Chegada, caminhada leve e almoço antecipado</p></div></div><p class="description">O roteiro começa ao sair da estação Venezia Santa Lucia e acompanha uma rota fácil até Rialto — pensada para o grupo caminhar com conforto.</p><div class="day"><span class="date-tag">09:30 · Desembarque na estação</span><ul><li><i class="fa-solid fa-train"></i>Saia pela Venezia Santa Lucia e aproveite a primeira vista do Canal Grande.</li></ul></div><div class="day"><span class="date-tag">10:00 · Caminhada para Rialto</span><ul><li><i class="fa-solid fa-person-walking"></i>Siga as placas amarelas para “Rialto” pela Rio Terà Lista di Spagna, rua ampla com lojas e boa para crianças.</li></ul></div><div class="day"><span class="date-tag">11:30 · Almoço antecipado</span><ul><li><i class="fa-solid fa-utensils"></i>Uma pausa estratégica antes do movimento dos restaurantes.</li></ul></div></section>
-    <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="PM"><div class="card-head"><div class="place-icon"><i class="fa-solid fa-water"></i></div><div><h2>O coração de Veneza</h2><p class="period">Rialto, San Marco, gelato e uma travessia na água</p></div></div><div class="day"><span class="date-tag">13:00 · Ponte Rialto</span><ul><li><i class="fa-solid fa-camera"></i>Suba a ponte mais famosa da cidade para fotos panorâmicas do Canal Grande.</li></ul></div><div class="day"><span class="date-tag">14:30 · Piazza San Marco</span><ul><li><i class="fa-solid fa-landmark"></i>Visite a praça principal, com espaço para as crianças.</li><li><i class="fa-solid fa-church"></i>A entrada na Basílica é gratuita; reservar o acesso online por cerca de €6 ajuda a evitar filas.</li></ul></div><div class="day"><span class="date-tag">16:00 · Gelato e Traghetto</span><ul><li><i class="fa-solid fa-ice-cream"></i>Pausa para o gelato artesanal: em torno de €4 a €5.</li><li><i class="fa-solid fa-ship"></i>Faça uma travessia rápida de <em>Traghetto</em>, a gôndola pública: €2 por pessoa.</li></ul></div></section>
-    <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="€"><div class="card-head"><div class="place-icon"><i class="fa-solid fa-gondola"></i></div><div><h2>Passeio de gôndola</h2><p class="period">Tarifa diurna · das 09:00 às 19:00</p></div></div><p class="description">Para uma experiência privada pelos canais, planejem duas gôndolas para acomodar todo o grupo.</p><div class="grid"><article class="quick-card" style="--accent:#a45de5"><h3>Valor e duração</h3><ul><li><i class="fa-solid fa-euro-sign"></i><strong>€90</strong> por gôndola.</li><li><i class="fa-solid fa-clock"></i><strong>30 minutos</strong> de passeio.</li></ul></article><article class="quick-card" style="--accent:#a45de5"><h3>Para o grupo</h3><ul><li><i class="fa-solid fa-ship"></i><strong>2 gôndolas:</strong> €180 no total.</li><li><i class="fa-solid fa-users"></i>Cerca de <strong>€18 por pessoa</strong>.</li></ul></article><article class="quick-card" style="--accent:#a45de5"><h3>Tempo extra</h3><ul><li><i class="fa-solid fa-plus"></i>Cada 20 minutos adicionais custam <strong>€40 por gôndola</strong>.</li></ul></article></div></section>
-    <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="17"><div class="card-head"><div class="place-icon"><i class="fa-solid fa-sunset"></i></div><div><h2>Volta panorâmica</h2><p class="period">17:00 · San Marco Vallaresso → Santa Lucia</p></div></div><p class="description">Pegue o Vaporetto da Linha 1 na parada San Marco Vallaresso de volta à estação. O bilhete individual custa €9,50, e a viagem pelo Canal Grande ao pôr do sol é parte do passeio.</p></section>
+        <h2 class="section-title"><i class="fa-solid fa-clock"></i>Cronograma do dia</h2>
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="AM">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-sun"></i></div>
+                <div>
+                    <h2>Manhã em Cannaregio</h2>
+                    <p class="period">Chegada, caminhada leve e almoço antecipado</p>
+                </div>
+            </div>
+            <p class="description">O roteiro começa ao sair da estação Venezia Santa Lucia e acompanha uma rota fácil
+                até Rialto — pensada para o grupo caminhar com conforto.</p>
+            <div class="day"><span class="date-tag">09:30 · Desembarque na estação</span>
+                <ul>
+                    <li><i class="fa-solid fa-train"></i>Saia pela Venezia Santa Lucia e aproveite a primeira vista do
+                        Canal Grande.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">10:00 · Caminhada para Rialto</span>
+                <ul>
+                    <li><i class="fa-solid fa-person-walking"></i>Siga as placas amarelas para “Rialto” pela Rio Terà
+                        Lista di Spagna, rua ampla com lojas e boa para crianças.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">11:30 · Almoço antecipado</span>
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i>Uma pausa estratégica antes do movimento dos restaurantes.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="PM">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+                <div>
+                    <h2>O coração de Veneza</h2>
+                    <p class="period">Rialto, San Marco, gelato e uma travessia na água</p>
+                </div>
+            </div>
+            <div class="day"><span class="date-tag">13:00 · Ponte Rialto</span>
+                <ul>
+                    <li><i class="fa-solid fa-camera"></i>Suba a ponte mais famosa da cidade para fotos panorâmicas do
+                        Canal Grande.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">14:30 · Piazza San Marco</span>
+                <ul>
+                    <li><i class="fa-solid fa-landmark"></i>Visite a praça principal, com espaço para as crianças.</li>
+                    <li><i class="fa-solid fa-church"></i>A entrada na Basílica é gratuita; reservar o acesso online por
+                        cerca de €6 ajuda a evitar filas.</li>
+                </ul>
+            </div>
+            <div class="day"><span class="date-tag">16:00 · Gelato e Traghetto</span>
+                <ul>
+                    <li><i class="fa-solid fa-ice-cream"></i>Pausa para o gelato artesanal: em torno de €4 a €5.</li>
+                    <li><i class="fa-solid fa-ship"></i>Faça uma travessia rápida de <em>Traghetto</em>, a gôndola
+                        pública: €2 por pessoa.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="€">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-gondola"></i></div>
+                <div>
+                    <h2>Passeio de gôndola</h2>
+                    <p class="period">Tarifa diurna · das 09:00 às 19:00</p>
+                </div>
+            </div>
+            <p class="description">Para uma experiência privada pelos canais, planejem duas gôndolas para acomodar todo
+                o grupo.</p>
+            <div class="grid">
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Valor e duração</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-euro-sign"></i><strong>€90</strong> por gôndola.</li>
+                        <li><i class="fa-solid fa-clock"></i><strong>30 minutos</strong> de passeio.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Para o grupo</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-ship"></i><strong>2 gôndolas:</strong> €180 no total.</li>
+                        <li><i class="fa-solid fa-users"></i>Cerca de <strong>€18 por pessoa</strong>.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Tempo extra</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-plus"></i>Cada 20 minutos adicionais custam <strong>€40 por
+                                gôndola</strong>.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="17">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-sunset"></i></div>
+                <div>
+                    <h2>Volta panorâmica</h2>
+                    <p class="period">17:00 · San Marco Vallaresso → Santa Lucia</p>
+                </div>
+            </div>
+            <p class="description">Pegue o Vaporetto da Linha 1 na parada San Marco Vallaresso de volta à estação. O
+                bilhete individual custa €9,50, e a viagem pelo Canal Grande ao pôr do sol é parte do passeio.</p>
+        </section>
 
-    <h2 class="section-title"><i class="fa-solid fa-pizza-slice"></i>Onde comer</h2>
-    <section class="grid">
-      <article class="quick-card" style="--accent:#078b62"><h3>Ae Oche · Cannaregio</h3><ul><li><i class="fa-solid fa-users"></i>Espaçoso e ideal para famílias ou grupos grandes.</li><li><i class="fa-solid fa-pizza-slice"></i>Pizzas gigantes e massas tradicionais.</li><li><i class="fa-solid fa-euro-sign"></i>Pratos individuais entre €9 e €15.</li></ul></article>
-      <article class="quick-card" style="--accent:#a45de5"><h3>Ristorante San Trovaso</h3><ul><li><i class="fa-solid fa-building"></i>Trattoria clássica de dois andares, em Dorsoduro.</li><li><i class="fa-solid fa-bowl-food"></i>Massas fartas entre €12 e €16; Margherita por menos de €10.</li></ul></article>
-      <article class="quick-card" style="--accent:#dd5072"><h3>Puppa Bar Venezia</h3><ul><li><i class="fa-solid fa-location-dot"></i>Pequeno, mas conhecido pelo bom custo-benefício em Cannaregio.</li><li><i class="fa-solid fa-receipt"></i>Menu do dia: massa ou pizza + bebida + café por cerca de €15.</li></ul></article>
-    </section>
+        <h2 class="section-title"><i class="fa-solid fa-pizza-slice"></i>Onde comer</h2>
+        <section class="grid">
+            <article class="quick-card" style="--accent:#078b62">
+                <h3>Ae Oche · Cannaregio</h3>
+                <ul>
+                    <li><i class="fa-solid fa-users"></i>Espaçoso e ideal para famílias ou grupos grandes.</li>
+                    <li><i class="fa-solid fa-pizza-slice"></i>Pizzas gigantes e massas tradicionais.</li>
+                    <li><i class="fa-solid fa-euro-sign"></i>Pratos individuais entre €9 e €15.</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#a45de5">
+                <h3>Ristorante San Trovaso</h3>
+                <ul>
+                    <li><i class="fa-solid fa-building"></i>Trattoria clássica de dois andares, em Dorsoduro.</li>
+                    <li><i class="fa-solid fa-bowl-food"></i>Massas fartas entre €12 e €16; Margherita por menos de €10.
+                    </li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#dd5072">
+                <h3>Puppa Bar Venezia</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>Pequeno, mas conhecido pelo bom custo-benefício em
+                        Cannaregio.</li>
+                    <li><i class="fa-solid fa-receipt"></i>Menu do dia: massa ou pizza + bebida + café por cerca de €15.
+                    </li>
+                </ul>
+            </article>
+        </section>
 
-    <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Dicas para o grupo</h2>
-    <section class="grid"><article class="quick-card" style="--accent:#e55055"><h3>Coperto</h3><ul><li><i class="fa-solid fa-receipt"></i>Restaurantes cobram taxa fixa por pessoa sentada, geralmente de €1,50 a €3. Evite comer junto à Praça São Marcos.</li></ul></article><article class="quick-card" style="--accent:#2697c5"><h3>Reserve com antecedência</h3><ul><li><i class="fa-solid fa-calendar-check"></i>Para 10 pessoas, reserve no Ae Oche na noite anterior ou logo pela manhã.</li></ul></article><article class="quick-card" style="--accent:#d68a18"><h3>Banheiros</h3><ul><li><i class="fa-solid fa-restroom"></i>Os banheiros públicos custam cerca de €1,50. Aproveite os dos restaurantes durante as paradas.</li></ul></article></section>
-    <p class="notice"><i class="fa-solid fa-heart"></i><strong>Ritmo do dia:</strong> priorizem a caminhada, pequenas pausas e o tempo juntos. Em Veneza, perder-se um pouquinho entre os canais também faz parte da experiência.</p>
-  </main>
-  <footer><strong>Veneza em 1 dia</strong> · uma aventura em grupo entre pontes, canais e sabores. 🍝</footer>
+        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Dicas para o grupo</h2>
+        <section class="grid">
+            <article class="quick-card" style="--accent:#e55055">
+                <h3>Coperto</h3>
+                <ul>
+                    <li><i class="fa-solid fa-receipt"></i>Restaurantes cobram taxa fixa por pessoa sentada, geralmente
+                        de €1,50 a €3. Evite comer junto à Praça São Marcos.</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#2697c5">
+                <h3>Reserve com antecedência</h3>
+                <ul>
+                    <li><i class="fa-solid fa-calendar-check"></i>Para 10 pessoas, reserve no Ae Oche na noite anterior
+                        ou logo pela manhã.</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#d68a18">
+                <h3>Banheiros</h3>
+                <ul>
+                    <li><i class="fa-solid fa-restroom"></i>Os banheiros públicos custam cerca de €1,50. Aproveite os
+                        dos restaurantes durante as paradas.</li>
+                </ul>
+            </article>
+        </section>
+        <p class="notice"><i class="fa-solid fa-heart"></i><strong>Ritmo do dia:</strong> priorizem a caminhada,
+            pequenas pausas e o tempo juntos. Em Veneza, perder-se um pouquinho entre os canais também faz parte da
+            experiência.</p>
+    </main>
+    <footer><strong>Veneza em 1 dia</strong> · uma aventura em grupo entre pontes, canais e sabores. 🍝</footer>
 </body>
+
 </html>

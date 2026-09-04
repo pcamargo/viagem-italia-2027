@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Val d’Orcia | Roma a Siena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 4.8rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: var(--red);
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, var(--green))
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, var(--green));
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, var(--green));
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #e3f7ef)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, var(--green));
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, var(--green));
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #fff2d1;
+            color: #664b11;
+            line-height: 1.55
+        }
+
+        .notice i {
+            color: #e99c00;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: var(--green)
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Roma · Val d’Orcia · Siena</p>
+        <h1>Estrada pela Toscana</h1>
+        <p class="subtitle">Vinho, pecorino, águas termais e as colinas mais bonitas da Itália. 🌻</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-clock"></i>08:00 a 17:45</div>
+            <div><i class="fa-solid fa-car-side"></i>Roma → Siena</div>
+            <div><i class="fa-solid fa-route"></i>Montepulciano · Pienza · Bagno Vignoni</div>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-route"></i>Cronograma ideal</h2>
+        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-car"></i></div>
+                <div>
+                    <h2>Saída de Roma</h2>
+                    <p class="period">08:00 · A1, a Autostrada del Sole, em direção ao norte</p>
+                </div>
+            </div>
+            <p class="description">Peguem a estrada cedo para chegar ao Val d’Orcia em cerca de duas horas e fazer as
+                três paradas sem pressa.</p>
+        </section>
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div>
+                    <h2>Montepulciano</h2>
+                    <p class="period">10:15–12:30 · A maior das três cidades</p>
+                </div>
+            </div>
+            <p class="description">Estacionem na parte baixa, como no Parcheggio 1 da Piazza Don Minzoni, e subam a pé
+                pelo Il Corso até a Piazza Grande.</p>
+            <div class="day"><span class="date-tag">Não deixe de fazer</span>
+                <ul>
+                    <li><i class="fa-solid fa-archway"></i>Explorar as caves subterrâneas monumentais, como Cantina
+                        Contucci ou Ercolani.</li>
+                    <li><i class="fa-solid fa-camera"></i>Parar na Piazza Grande para apreciar os palácios e a vista
+                        sobre a paisagem toscana.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-cheese"></i></div>
+                <div>
+                    <h2>Pienza</h2>
+                    <p class="period">12:50–15:15 · A cidade ideal do Renascimento</p>
+                </div>
+            </div>
+            <p class="description">A SP146, entre Montepulciano e Pienza, é uma atração em si: colinas, ciprestes e
+                curvas suaves. Pienza é plana e compacta, ideal para a pausa mais longa do dia.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#078b62">
+                    <h3>Almoço</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-utensils"></i>Trattoria Latte di Luna para uma refeição sentada e
+                            tranquila.</li>
+                        <li><i class="fa-solid fa-cheese"></i>Ou comprem tábuas de Pecorino di Pienza e embutidos para
+                            um piquenique com vista para o vale.</li>
+                    </ul>
+                </article>
+                <article class="quick-card" style="--accent:#078b62">
+                    <h3>Passeio leve</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-person-walking"></i>Percorram as ruelas renascentistas e os mirantes
+                            sobre a Val d’Orcia.</li>
+                        <li><i class="fa-solid fa-bag-shopping"></i>Levem um pedaço de pecorino para a viagem.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+                <div>
+                    <h2>Bagno Vignoni</h2>
+                    <p class="period">15:45–16:45 · O toque especial do dia</p>
+                </div>
+            </div>
+            <p class="description">No caminho, façam uma rápida foto na Cappella della Madonna di Vitaleta. Em Bagno
+                Vignoni, a praça central é uma grande piscina de águas termais do século XVI.</p>
+            <div class="day"><span class="date-tag">Uma hora basta</span>
+                <ul>
+                    <li><i class="fa-solid fa-person-walking"></i>Caminhem ao redor da praça d’água e descubram o
+                        pequeno vilarejo.</li>
+                    <li><i class="fa-solid fa-mug-hot"></i>Tomem um café, desacelerem e curtam a atmosfera termal.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-hotel"></i></div>
+                <div>
+                    <h2>Chegada em Siena</h2>
+                    <p class="period">16:45–17:45 · SR2 → Hotel Santa Caterina</p>
+                </div>
+            </div>
+            <p class="description">A última hora de estrada leva vocês até Siena no fim da tarde: o momento certo para
+                fazer check-in, estacionar e descansar antes do jantar.</p>
+        </section>
+        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Pequenos cuidados</h2>
+        <section class="grid">
+            <article class="quick-card" style="--accent:#e55055">
+                <h3>Estacionamento</h3>
+                <ul>
+                    <li><i class="fa-solid fa-square-parking"></i>Prefiram os estacionamentos externos e caminhem para
+                        os centros históricos, evitando o risco das ZTLs.</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#2697c5">
+                <h3>Degustações</h3>
+                <ul>
+                    <li><i class="fa-solid fa-wine-glass"></i>Se forem provar vinho em Montepulciano, definam
+                        previamente quem ficará ao volante.</li>
+                </ul>
+            </article>
+            <article class="quick-card" style="--accent:#d68a18">
+                <h3>Fotos no caminho</h3>
+                <ul>
+                    <li><i class="fa-solid fa-camera"></i>Guardem alguns minutos extras para a SP146 e a Cappella
+                        Vitaleta: a estrada também é parte do roteiro.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer><strong>Val d’Orcia</strong> · o caminho mais bonito entre Roma e Siena. 🇮🇹</footer>
+</body>
+
+</html>
