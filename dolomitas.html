@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dolomitas no Inverno | Roteiro Cortina d'Ampezzo & Lagos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --green: #078b62;
+            --red: #e55055;
+            --sun: #ffc95c;
+            --blue: #4da6e8;
+            --ink: #24313f;
+            --cream: #fffaf1
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "DM Sans", sans-serif;
+            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 20px 55px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(120deg, #1b4965, #2b6cb0 48%, #4a90e2 48%, #6ba4e8)
+        }
+
+        header:before,
+        header:after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 180px;
+            border: 18px solid #ffffff29;
+            border-radius: 50%
+        }
+
+        header:before {
+            left: -65px;
+            bottom: -105px
+        }
+
+        header:after {
+            right: -55px;
+            top: -105px
+        }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fredoka, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            line-height: .95
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            font-size: 1.06rem;
+            font-weight: 500
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: -28px auto 0;
+            padding: 0 20px 48px;
+            position: relative
+        }
+
+        .trip-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px #24313f29;
+            background: #24313f1a
+        }
+
+        .trip-strip div {
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            font-size: .88rem;
+            font-weight: 700
+        }
+
+        .trip-strip i,
+        .section-title i {
+            color: #2b6cb0;
+            margin-right: 7px
+        }
+
+        .section-title {
+            margin: 46px 0 18px;
+            font-size: 1.7rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 16px
+        }
+
+        .card,
+        .quick-card {
+            background: #fffffff0;
+            border: 1px solid #24313f14;
+            box-shadow: 0 8px 22px #24313f14
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 24px;
+            border-top: 6px solid var(--accent, #2b6cb0)
+        }
+
+        .card:after {
+            position: absolute;
+            right: -18px;
+            bottom: -34px;
+            color: var(--accent, #2b6cb0);
+            content: attr(data-number);
+            font: 700 8rem/1 Fredoka, sans-serif;
+            opacity: .07
+        }
+
+        .card-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            z-index: 1
+        }
+
+        .place-icon {
+            display: grid;
+            flex: 0 0 49px;
+            width: 49px;
+            height: 49px;
+            place-items: center;
+            border-radius: 15px;
+            color: #fff;
+            background: var(--accent, #2b6cb0);
+            font-size: 1.35rem
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.55rem, 4vw, 2rem)
+        }
+
+        .period {
+            margin: 5px 0 0;
+            color: #637080;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .description {
+            position: relative;
+            z-index: 1;
+            margin: 18px 0;
+            padding: 13px 15px;
+            border-radius: 11px;
+            color: #4c5966;
+            line-height: 1.55;
+            background: var(--tint, #eaf2fb)
+        }
+
+        .day {
+            position: relative;
+            z-index: 1;
+            padding: 14px 0;
+            border-top: 1px dashed #d7dde1
+        }
+
+        .day:first-of-type {
+            border-top: 0
+        }
+
+        .date-tag {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent, #2b6cb0);
+            font-weight: 700
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.48
+        }
+
+        li i {
+            width: 25px;
+            color: var(--accent, #2b6cb0);
+            text-align: center
+        }
+
+        .quick-card {
+            padding: 20px;
+            border-radius: 17px
+        }
+
+        .quick-card h3 {
+            margin: 0 0 10px;
+            color: var(--accent, var(--red));
+            font-size: 1.12rem
+        }
+
+        .notice {
+            padding: 17px 19px;
+            border-radius: 14px;
+            background: #eef7ff;
+            color: #1b4965;
+            line-height: 1.55;
+            margin-bottom: 24px;
+            border: 1px solid #cde4ff
+        }
+
+        .notice i {
+            color: #2b6cb0;
+            margin-right: 7px
+        }
+
+        footer {
+            padding: 34px 20px 46px;
+            text-align: center;
+            color: #637080;
+            font-size: .9rem
+        }
+
+        footer strong {
+            color: #2b6cb0
+        }
+
+        @media(max-width:580px) {
+            header {
+                padding-top: 50px
+            }
+
+            .container {
+                padding: 0 13px 35px
+            }
+
+            .trip-strip {
+                grid-template-columns: 1fr
+            }
+
+            .card {
+                padding: 20px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="eyebrow">Dolomitas · Cortina d'Ampezzo</p>
+        <h1>Dolomitas no Inverno</h1>
+        <p class="subtitle">Lagos congelados, gastronomia alpina rústica e paisagens cobertas de neve. 🏔️❄️</p>
+    </header>
+    <main class="container">
+        <section class="trip-strip">
+            <div><i class="fa-solid fa-calendar-days"></i>14 e 15 de Janeiro</div>
+            <div><i class="fa-solid fa-hotel"></i>Hospedagem: Rifugio Ospitale</div>
+            <div><i class="fa-solid fa-snowflake"></i>Auge do Inverno Alpino</div>
+        </section>
+
+        <p class="notice"><i class="fa-solid fa-triangle-exclamation"></i><strong>Aviso de Inverno:</strong> Em meados de janeiro, a neve na região é intensa. A ciclovia San Candido-Lienz opera como pista de esqui cross-country. Todas as caminhadas sugeridas são em áreas planas e acessíveis para crianças e idosos.</p>
+
+        <!-- DIA 1 -->
+        <h2 class="section-title"><i class="fa-solid fa-snowflake"></i>Dia 1 (14/01) · Chegada, Lago Congelado e Tradição</h2>
+
+        <section class="card" style="--accent:#2b6cb0;--tint:#eaf2fb" data-number="01">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-snowflake"></i></div>
+                <div>
+                    <h2>Lago di Braies Congelado & Almoço Aquecido</h2>
+                    <p class="period">10:30–13:00 · A Estrela das Dolomitas</p>
+                </div>
+            </div>
+            <p class="description">Aproveite a chegada do grupo para fazer a parada direta no lago congelado antes do check-in no hotel.</p>
+            <ul>
+                <li><i class="fa-solid fa-square-parking"></i><strong>Estacionamento P3:</strong> Pare o mais próximo possível da entrada para poupar a caminhada dos idosos no frio.</li>
+                <li><i class="fa-solid fa-person-walking"></i><strong>Caminhada Segura:</strong> Explore a margem principal (plana e segura). Evite trilhas periféricas devido ao gelo liso.</li>
+                <li><i class="fa-solid fa-utensils"></i><strong>Almoço no Hotel Lago di Braies:</strong> Refeição no restaurante aquecido na margem (experimente o goulash quente ou massas austro-italianas como <em>Schlutzkrapfen</em>).</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="02">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-key"></i></div>
+                <div>
+                    <h2>Check-in e Descanso no Rifugio Ospitale</h2>
+                    <p class="period">14:00–16:00 · Boas-vindas e descanso</p>
+                </div>
+            </div>
+            <p class="description">Siga para o Hotel Rifugio Ospitale para fazer o check-in com calma, descarregar as malas e permitir que todos descansem após a viagem.</p>
+        </section>
+
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="03">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-mountain-city"></i></div>
+                <div>
+                    <h2>Fim de Tarde em Cortina d'Ampezzo</h2>
+                    <p class="period">16:00–18:00 · Vila Olímpica de Inverno</p>
+                </div>
+            </div>
+            <p class="description">Passeio no charmoso centro pedestre de Cortina d'Ampezzo.</p>
+            <ul>
+                <li><i class="fa-solid fa-shoe-prints"></i><strong>Corso Italia:</strong> Rua de pedestres totalmente plana e fácil para idosos e crianças.</li>
+                <li><i class="fa-solid fa-mug-hot"></i>Passeio pelas lojas alpinas, igrejas históricas e parada para chocolate quente nas cafeterias.</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div>
+                    <h2>Jantar Rústico em Família</h2>
+                    <p class="period">20:00 · No próprio Ristorante Rifugio Ospitale</p>
+                </div>
+            </div>
+            <p class="description">Jantar no ambiente acolhedor do refúgio, rodeado por madeira escura e pratos rústicos da gastronomia das montanhas.</p>
+        </section>
+
+
+        <!-- DIA 2 -->
+        <h2 class="section-title"><i class="fa-solid fa-icicles"></i>Dia 2 (15/01) · Cartão-Postal Alpino & Sabores Locais</h2>
+
+        <section class="card" style="--accent:#1b4965;--tint:#e8f1f7" data-number="05">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                <div>
+                    <h2>Manhã no Lago di Misurina</h2>
+                    <p class="period">10:00–12:30 · O Espelho Alpino Congelado</p>
+                </div>
+            </div>
+            <p class="description">Curta navegação de 20 minutos de carro até um dos cenários mais deslumbrantes das Dolomitas.</p>
+            <ul>
+                <li><i class="fa-solid fa-square-parking"></i><strong>Onde estacionar:</strong> Vagas pagas situadas logo em frente ao lago, ao longo da via principal.</li>
+                <li><i class="fa-solid fa-mountain"></i><strong>Cenário de Filme:</strong> O lago congelado fica cercado pelos imponentes picos nevados das Tre Cime di Lavaredo.</li>
+            </ul>
+        </section>
+
+        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="06">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                    <h2>Almoço em Cabana Alpina (Malga Misurina)</h2>
+                    <p class="period">12:30–14:30 · Gastronomia rústica</p>
+                </div>
+            </div>
+            <p class="description">Almoço acolhedor na cabana rústica Malga Misurina com vistas panorâmicas da neve.</p>
+            <div class="grid" style="position:relative;z-index:1">
+                <article class="quick-card" style="--accent:#a45de5">
+                    <h3>Destaques do Cardápio</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-cheese"></i>Polenta bem quente com queijo fundido local.</li>
+                        <li><i class="fa-solid fa-drumstick-bite"></i>Pratos tradicionais com carnes de caça.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="07">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-store"></i></div>
+                <div>
+                    <h2>Passeio e Compras em Cortina d'Ampezzo</h2>
+                    <p class="period">15:00–17:30 · A "Rainha das Dolomitas"</p>
+                </div>
+            </div>
+            <p class="description">Aproveite a tarde para explorar Cortina com mais calma, passeando pelas boutiques de grife, artesanato e cafés da Corso Italia.</p>
+        </section>
+
+        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="08">
+            <div class="card-head">
+                <div class="place-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <div>
+                    <h2>Jantar de Despedida no Refúgio</h2>
+                    <p class="period">19:30 · Gastronomia típica do Rifugio Ospitale</p>
+                </div>
+            </div>
+            <p class="description">Sem precisar se deslocar à noite na neve, aproveite a aclamada cozinha do refúgio.</p>
+            <ul>
+                <li><i class="fa-solid fa-bowl-rice"></i><strong>Canederli in brodo:</strong> Sopa tradicional de almôndegas de pão e especiarias alpinas.</li>
+                <li><i class="fa-solid fa-plate-wheat"></i><strong>Pappardelle con selvaggina:</strong> Massa artesanal servida com ragu de caça tradicional.</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer><strong>Dolomitas no Inverno</strong> · magia, paisagens inesquecíveis e conforto para toda a família. 🏔️🇮🇹</footer>
+</body>
+
+</html>
