@@ -1,425 +1,477 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chianti em 1 Dia | Roteiro saindo de Siena</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        :root {
-            --green: #078b62;
-            --red: #e55055;
-            --sun: #ffc95c;
-            --blue: #4da6e8;
-            --ink: #24313f;
-            --cream: #fffaf1
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chianti em 1 Dia | Roteiro saindo de Siena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --text: #2c2825;
+      --text-muted: #6b625b;
+      --accent: #7a232e;
+      --accent-light: #f6eaec;
+      --olive: #4a5d4e;
+      --olive-light: #eef2ef;
+      --gold: #b0893e;
+      --border: #e6dfd5;
+      --radius: 14px;
+      --shadow: 0 4px 20px rgba(44, 40, 37, 0.06);
+    }
 
-        * {
-            box-sizing: border-box
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            margin: 0;
-            color: var(--ink);
-            font-family: "DM Sans", sans-serif;
-            background: radial-gradient(circle at 10% 8%, #ffe3a4 0, transparent 22rem), radial-gradient(circle at 90% 30%, #cdeeff 0, transparent 25rem), var(--cream)
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        header {
-            position: relative;
-            overflow: hidden;
-            padding: 64px 20px 55px;
-            text-align: center;
-            color: #fff;
-            background: linear-gradient(120deg, var(--green), #0caa80 48%, #f05a60 48%, var(--red))
-        }
+    header {
+      background: linear-gradient(135deg, #2d1a1e 0%, #581c24 55%, #3d4b3e 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+    }
 
-        header:before,
-        header:after {
-            position: absolute;
-            content: "";
-            width: 180px;
-            height: 180px;
-            border: 18px solid #ffffff29;
-            border-radius: 50%
-        }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(6px);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-        header:before {
-            left: -65px;
-            bottom: -105px
-        }
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
 
-        header:after {
-            right: -55px;
-            top: -105px
-        }
+    header p.subtitle {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
 
-        .eyebrow {
-            margin: 0 0 9px;
-            font-size: .8rem;
-            font-weight: 700;
-            letter-spacing: .18em;
-            text-transform: uppercase
-        }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
 
-        h1,
-        h2,
-        h3 {
-            font-family: Fredoka, sans-serif
-        }
+    .meta-pill {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: clamp(2.7rem, 8vw, 4.8rem);
-            line-height: .95
-        }
+    main {
+      max-width: 880px;
+      margin: -2rem auto 4rem;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 2;
+    }
 
-        .subtitle {
-            margin: 14px 0 0;
-            font-size: 1.06rem;
-            font-weight: 500
-        }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
 
-        .container {
-            max-width: 1120px;
-            margin: -28px auto 0;
-            padding: 0 20px 48px;
-            position: relative
-        }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
-        .trip-strip {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            overflow: hidden;
-            border-radius: 18px;
-            box-shadow: 0 12px 25px #24313f29;
-            background: #24313f1a
-        }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
 
-        .trip-strip div {
-            padding: 15px;
-            text-align: center;
-            background: #fff;
-            font-size: .88rem;
-            font-weight: 700
-        }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .trip-strip i,
-        .section-title i {
-            color: var(--red);
-            margin-right: 7px
-        }
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text);
+    }
 
-        .section-title {
-            margin: 46px 0 18px;
-            font-size: 1.7rem
-        }
+    .card-time {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-            gap: 16px
-        }
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
 
-        .card,
-        .quick-card {
-            background: #fffffff0;
-            border: 1px solid #24313f14;
-            box-shadow: 0 8px 22px #24313f14
-        }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
 
-        .card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            padding: 26px;
-            margin-bottom: 24px;
-            border-top: 6px solid var(--accent, var(--green))
-        }
+    .sub-box {
+      background: #fcfaf7;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+    }
 
-        .card:after {
-            position: absolute;
-            right: -18px;
-            bottom: -34px;
-            color: var(--accent, var(--green));
-            content: attr(data-number);
-            font: 700 8rem/1 Fredoka, sans-serif;
-            opacity: .07
-        }
+    .sub-box.pitoresco {
+      background: var(--olive-light);
+      border-color: #d3ddd5;
+    }
 
-        .card-head {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            position: relative;
-            z-index: 1
-        }
+    .sub-box.gastronomia {
+      background: #fdf8f4;
+      border-color: #ebd9cc;
+    }
 
-        .place-icon {
-            display: grid;
-            flex: 0 0 49px;
-            width: 49px;
-            height: 49px;
-            place-items: center;
-            border-radius: 15px;
-            color: #fff;
-            background: var(--accent, var(--green));
-            font-size: 1.35rem
-        }
+    .sub-box h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
 
-        h2 {
-            margin: 0;
-            font-size: clamp(1.55rem, 4vw, 2rem)
-        }
+    .sub-box.pitoresco h3 {
+      color: var(--olive);
+    }
 
-        .period {
-            margin: 5px 0 0;
-            color: #637080;
-            font-weight: 700;
-            font-size: .9rem
-        }
+    .sub-box.gastronomia h3 {
+      color: var(--accent);
+    }
 
-        .description {
-            position: relative;
-            z-index: 1;
-            margin: 18px 0;
-            padding: 13px 15px;
-            border-radius: 11px;
-            color: #4c5966;
-            line-height: 1.55;
-            background: var(--tint, #e3f7ef)
-        }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
 
-        .day {
-            position: relative;
-            z-index: 1;
-            padding: 14px 0;
-            border-top: 1px dashed #d7dde1
-        }
+    li {
+      font-size: 0.92rem;
+      color: var(--text);
+      padding-left: 1.15rem;
+      position: relative;
+    }
 
-        .day:first-of-type {
-            border-top: 0
-        }
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
 
-        .date-tag {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--accent, var(--green));
-            font-weight: 700
-        }
+    .sub-box.pitoresco li::before {
+      color: var(--olive);
+    }
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none
-        }
+    .sub-box.gastronomia li::before {
+      color: var(--accent);
+    }
 
-        li {
-            margin: 8px 0;
-            line-height: 1.48
-        }
+    li strong {
+      font-weight: 600;
+      color: #1f1c1a;
+    }
 
-        li i {
-            width: 25px;
-            color: var(--accent, var(--green));
-            text-align: center
-        }
+    .tips-section {
+      margin-top: 2.5rem;
+    }
 
-        .quick-card {
-            padding: 20px;
-            border-radius: 17px
-        }
+    .tips-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
 
-        .quick-card h3 {
-            margin: 0 0 10px;
-            color: var(--accent, var(--red));
-            font-size: 1.12rem
-        }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
 
-        .notice {
-            padding: 17px 19px;
-            border-radius: 14px;
-            background: #fff2d1;
-            color: #664b11;
-            line-height: 1.55
-        }
+    .tip-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
 
-        .notice i {
-            color: #e99c00;
-            margin-right: 7px
-        }
+    .tip-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--accent);
+    }
 
-        footer {
-            padding: 34px 20px 46px;
-            text-align: center;
-            color: #637080;
-            font-size: .9rem
-        }
+    .tip-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
 
-        footer strong {
-            color: var(--green)
-        }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      max-width: 880px;
+      margin: 0 auto;
+    }
 
-        @media(max-width:580px) {
-            header {
-                padding-top: 50px
-            }
-
-            .container {
-                padding: 0 13px 35px
-            }
-
-            .trip-strip {
-                grid-template-columns: 1fr
-            }
-
-            .card {
-                padding: 20px
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.35rem;
+      }
+      header {
+        padding: 2.75rem 1.25rem 3.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <p class="eyebrow">Toscana · Itália · Roteiro de carro</p>
-        <h1>Colinas do Chianti</h1>
-        <p class="subtitle">Torres medievais, schiacciata, vinhedos e estradas que merecem ser percorridas sem pressa.
-            🍷</p>
-    </header>
-    <main class="container">
-        <section class="trip-strip">
-            <div><i class="fa-solid fa-clock"></i>08:30 a fim de tarde</div>
-            <div><i class="fa-solid fa-car-side"></i>Siena → Chianti → Siena</div>
-            <div><i class="fa-solid fa-camera"></i>4 paradas especiais</div>
-        </section>
-        <h2 class="section-title"><i class="fa-solid fa-route"></i>Roteiro passo a passo</h2>
-        <section class="card" style="--accent:#078b62;--tint:#e3f7ef" data-number="01">
-            <div class="card-head">
-                <div class="place-icon"><i class="fa-solid fa-car"></i></div>
-                <div>
-                    <h2>Saída de Siena</h2>
-                    <p class="period">08:30 · Hotel Santa Caterina</p>
-                </div>
-            </div>
-            <p class="description">Comecem cedo para aproveitar a luz da manhã e fazer as paradas com tranquilidade. O
-                circuito segue Siena → San Gimignano → Castellina in Chianti → Montefioralle → Siena.</p>
-        </section>
-        <section class="card" style="--accent:#d68a18;--tint:#fff3dd" data-number="02">
-            <div class="card-head">
-                <div class="place-icon"><i class="fa-solid fa-tower-observation"></i></div>
-                <div>
-                    <h2>San Gimignano</h2>
-                    <p class="period">09:15–11:45 · Torres, praças e gelato</p>
-                </div>
-            </div>
-            <p class="description">Estacionem em um dos bolsões fora das muralhas, como Parcheggio Giubileo ou Bagnaia.
-                Duas horas e meia permitem sentir a cidade com calma.</p>
-            <div class="day"><span class="date-tag">O que fazer</span>
-                <ul>
-                    <li><i class="fa-solid fa-landmark"></i>Piazza della Cisterna e suas construções medievais.</li>
-                    <li><i class="fa-solid fa-tower-observation"></i>Subida à Torre Grossa para uma vista ampla das
-                        colinas.</li>
-                    <li><i class="fa-solid fa-ice-cream"></i>Uma pausa para o famoso sorvete da Gelateria Dondoli.</li>
-                </ul>
-            </div>
-        </section>
-        <section class="card" style="--accent:#2697c5;--tint:#e4f7ff" data-number="03">
-            <div class="card-head">
-                <div class="place-icon"><i class="fa-solid fa-wine-glass"></i></div>
-                <div>
-                    <h2>Castellina in Chianti</h2>
-                    <p class="period">12:30–14:30 · Via delle Volte e almoço rápido</p>
-                </div>
-            </div>
-            <p class="description">O trajeto de San Gimignano até Castellina, entre 11:45 e 12:30, já é parte do
-                passeio: a paisagem muda das colinas para os vinhedos do Chianti.</p>
-            <div class="grid" style="position:relative;z-index:1">
-                <article class="quick-card" style="--accent:#2697c5">
-                    <h3>Não deixe de ver</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-archway"></i>A Via delle Volte, uma fascinante rua medieval coberta.
-                        </li>
-                        <li><i class="fa-solid fa-camera"></i>As vistas da muralha sobre os campos e vinhedos.</li>
-                    </ul>
-                </article>
-                <article class="quick-card" style="--accent:#2697c5">
-                    <h3>Almoço sem perder tempo</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-bread-slice"></i>Antica Delizia ou Macelleria Stiaccini para uma
-                            <em>schiacciata</em> recheada com frios locais.</li>
-                        <li><i class="fa-solid fa-wine-glass"></i>Uma taça de vinho completa a parada tipicamente
-                            toscana.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-        <section class="card" style="--accent:#a45de5;--tint:#f1eaff" data-number="04">
-            <div class="card-head">
-                <div class="place-icon"><i class="fa-solid fa-road"></i></div>
-                <div>
-                    <h2>Estrada Chiantigiana e Montefioralle</h2>
-                    <p class="period">14:30–16:30 · SR222, Panzano, Greve e uma vila de pedra</p>
-                </div>
-            </div>
-            <p class="description">Sigam ao norte pela SR222, a Chiantigiana. O caminho passa por Panzano e Greve in
-                Chianti antes da subida para Montefioralle.</p>
-            <div class="day"><span class="date-tag">15:00–16:30 · Montefioralle</span>
-                <ul>
-                    <li><i class="fa-solid fa-house"></i>Uma das vilas mais bonitas da Itália, minúscula e inteiramente
-                        cercada por vinhedos.</li>
-                    <li><i class="fa-solid fa-person-walking"></i>Uma hora de caminhada é suficiente para percorrer as
-                        ruelas de pedra e encontrar bons pontos para fotos.</li>
-                    <li><i class="fa-solid fa-square-parking"></i>Há um pequeno estacionamento gratuito na entrada; se
-                        estiver cheio, procure vagas ao longo da subida.</li>
-                </ul>
-            </div>
-        </section>
-        <section class="card" style="--accent:#e55055;--tint:#fff0ef" data-number="05">
-            <div class="card-head">
-                <div class="place-icon"><i class="fa-solid fa-rotate-left"></i></div>
-                <div>
-                    <h2>Retorno a Siena</h2>
-                    <p class="period">16:30 · Cerca de 1 hora pela SR222</p>
-                </div>
-            </div>
-            <p class="description">Desçam com calma de volta a Siena e cheguem ao hotel no fim da tarde, com tempo para
-                descansar antes do jantar.</p>
-        </section>
-        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i>Dicas úteis</h2>
-        <section class="grid">
-            <article class="quick-card" style="--accent:#e55055">
-                <h3>Atenção à ZTL</h3>
-                <ul>
-                    <li><i class="fa-solid fa-ban"></i>Não entrem de carro nas muralhas de San Gimignano ou Castellina.
-                        Sigam as placas azuis com a letra P para os estacionamentos externos.</li>
-                </ul>
-            </article>
-            <article class="quick-card" style="--accent:#078b62">
-                <h3>Tempo para fotos</h3>
-                <ul>
-                    <li><i class="fa-solid fa-camera"></i>Deixem uma pequena margem entre as paradas: na Toscana, um
-                        mirante inesperado costuma render a melhor lembrança do dia.</li>
-                </ul>
-            </article>
-            <article class="quick-card" style="--accent:#d68a18">
-                <h3>Estradas rurais</h3>
-                <ul>
-                    <li><i class="fa-solid fa-road"></i>Usem o GPS, mas dirijam sem pressa: as vias são cênicas,
-                        estreitas em alguns trechos e podem ter ciclistas ou tratores.</li>
-                </ul>
-            </article>
-        </section>
-    </main>
-    <footer><strong>Chianti em 1 dia</strong> · torres, vinhos e colinas que ficam na memória. 🇮🇹</footer>
-</body>
 
+  <header>
+    <div class="badge">Toscana · Itália · Roteiro de Carro</div>
+    <h1>Colinas do Chianti</h1>
+    <p class="subtitle">Torres medievais, schiacciata, vinhedos, cantinhos pitorescos e estradas que merecem ser percorridas sem pressa. 🍷</p>
+    <div class="meta-pills">
+      <span class="meta-pill">🕗 08:30 ao fim de tarde</span>
+      <span class="meta-pill">🚗 Siena → Chianti → Siena</span>
+      <span class="meta-pill">📍 4 paradas especiais</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="timeline">
+
+      <!-- Saída -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <div class="section-label">Etapa 1 · Partida</div>
+            <h2 class="card-title">Saída de Siena</h2>
+          </div>
+          <span class="card-time">08:30 · Hotel Santa Caterina</span>
+        </div>
+        <p>Comecem cedo para aproveitar a luz da manhã e fazer as paradas com tranquilidade. O circuito segue o fluxo natural das colinas: <strong>Siena → San Gimignano → Castellina in Chianti → Montefioralle → Siena</strong>.</p>
+      </article>
+
+      <!-- San Gimignano -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <div class="section-label">Etapa 2 · Cidade das Torres</div>
+            <h2 class="card-title">San Gimignano</h2>
+          </div>
+          <span class="card-time">09:15 – 11:45 · 2h30 de visita</span>
+        </div>
+        <p>Estacionem em um dos bolsões fora das muralhas, como <strong>Parcheggio Giubileo</strong> ou <strong>Bagnaia</strong>. Duas horas e meia permitem sentir a cidade com calma antes do horário de almoço.</p>
+
+        <div class="grid-2">
+          <div class="sub-box">
+            <h3>🏛️ Clássicos imperdíveis</h3>
+            <ul>
+              <li><strong>Piazza della Cisterna:</strong> coração medieval cercado por palácios e torres históricas.</li>
+              <li><strong>Torre Grossa:</strong> a torre mais alta da cidade, com vista panorâmica das colinas.</li>
+              <li><strong>Gelateria Dondoli:</strong> parada obrigatória na Piazza della Cisterna para o famoso gelato artesanal.</li>
+            </ul>
+          </div>
+
+          <div class="sub-box pitoresco">
+            <h3>🌿 Recantos pitorescos</h3>
+            <ul>
+              <li><strong>Rocca di Montestaffoli:</strong> ruínas da antiga fortaleza no ponto mais alto; entrada gratuita, silenciosa e com vista incrível para as torres.</li>
+              <li><strong>Via degli Innocenti e Porta delle Fonti:</strong> descida por vielas de pedra até as fontes medievais cobertas por arcos de tijolos fora do fluxo principal de turistas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub-box gastronomia" style="margin-top: 1rem;">
+          <h3>🍷 Sabores e pausas matinais</h3>
+          <ul>
+            <li><strong>Vernaccia di San Gimignano Wine Experience (La Rocca):</strong> degustação do vinho branco histórico da região logo ao lado da Rocca di Montestaffoli.</li>
+            <li><strong>Pasticceria Armando e Marcella:</strong> ótima parada rápida para um café expresso e doces típicos toscanos (como <em>ricciarelli</em> e <em>cantucci</em>).</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Castellina in Chianti -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <div class="section-label">Etapa 3 · Coração do Chianti Classico</div>
+            <h2 class="card-title">Castellina in Chianti</h2>
+          </div>
+          <span class="card-time">12:30 – 14:30 · Almoço e história</span>
+        </div>
+        <p>O trajeto de San Gimignano até Castellina (entre 11:45 e 12:30) já é parte do passeio: a paisagem muda das colinas para os vinhedos do Chianti Classico.</p>
+
+        <div class="grid-2">
+          <div class="sub-box">
+            <h3>🏰 Não deixe de ver</h3>
+            <ul>
+              <li><strong>Via delle Volte:</strong> fascinante passarela medieval coberta dentro das antigas muralhas, cheia de lojinhas e adegas.</li>
+              <li><strong>Rocca Comunale:</strong> fortaleza central com vista sobre os telhados e vinhedos ao redor.</li>
+            </ul>
+          </div>
+
+          <div class="sub-box pitoresco">
+            <h3>🌿 Recantos pitorescos</h3>
+            <ul>
+              <li><strong>Ipogeo Etrusco di Montecalvario:</strong> túmulos etruscos do século VI a.C. escondidos sob um bosque de ciprestes a 5 minutos do centro — atmosférico e pouco movimentado.</li>
+              <li><strong>Mirante da Via Ferruccio:</strong> calçadão panorâmico na saída sul com vista limpa para os vales.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub-box gastronomia" style="margin-top: 1rem;">
+          <h3>🍽️ Onde almoçar (sentado ou rápido)</h3>
+          <ul>
+            <li><strong>Ristorante Sotto le Volte:</strong> literalmente dentro da Via delle Volte; ambiente acolhedor de pedra, perfeito para dias frios e pratos clássicos toscanos.</li>
+            <li><strong>Trattoria La Torre:</strong> na praça principal, tradicional, farto, excelente custo-benefício e muito prático para grupos.</li>
+            <li><strong>Albergaccio di Castellina:</strong> opção mais refinada da culinária toscana (com histórico Michelin) em um ambiente rústico e intimista.</li>
+            <li><strong>Antica Delizia ou Macelleria Stiaccini:</strong> se preferirem algo rápido, oferecem excelentes <em>schiacciate</em> recheadas com frios locais.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Estrada Chiantigiana e Montefioralle -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <div class="section-label">Etapa 4 · Estrada SR222 e Vila de Pedra</div>
+            <h2 class="card-title">Chiantigiana, Panzano & Montefioralle</h2>
+          </div>
+          <span class="card-time">14:30 – 16:30 · Tarde nos vinhedos</span>
+        </div>
+        <p>Sigam ao norte pela <strong>SR222 (Via Chiantigiana)</strong>, uma das estradas mais cênicas da Itália, passando por <strong>Panzano</strong> e <strong>Greve in Chianti</strong> antes da subida curta até a vila murada de <strong>Montefioralle</strong>.</p>
+
+        <div class="grid-2">
+          <div class="sub-box">
+            <h3>🏘️ Montefioralle (15:00 – 16:30)</h3>
+            <ul>
+              <li><strong>Ruelas circulares de pedra:</strong> uma das vilas mais antigas e fotogênicas do Chianti, minúscula e cercada por vinhedos.</li>
+              <li><strong>Casa de Amerigo Vespucci:</strong> fachada histórica marcada pelo brasão da família do navegador florentino (uma vespa).</li>
+              <li><strong>Estacionamento:</strong> pequeno bolsão gratuito na entrada; se estiver cheio, estacione com cuidado ao longo da subida.</li>
+            </ul>
+          </div>
+
+          <div class="sub-box pitoresco">
+            <h3>🌿 Recantos pitorescos no caminho</h3>
+            <ul>
+              <li><strong>Pieve di San Leolino (Panzano):</strong> igreja românica isolada no topo de uma colina logo após Panzano, cercada por ciprestes e silêncio absoluto.</li>
+              <li><strong>Piazza Matteotti (Greve in Chianti):</strong> praça triangular cercada por pórticos onde fica a histórica <em>Antica Macelleria Falorni</em> (vale uma espiada rápida nas adegas e presuntos pendurados).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub-box gastronomia" style="margin-top: 1rem;">
+          <h3>🍷 Sabores e paradas na rota SR222 / Montefioralle</h3>
+          <ul>
+            <li><strong>I'Desìo Ristorante (Montefioralle):</strong> dentro da vila, ideal para uma refeição mais tarde ou uma taça de vinho com vista para as colinas (atente-se ao horário diurno/tarde).</li>
+            <li><strong>Taverna del Guerrino (Montefioralle):</strong> trattoria familiar rústica na entrada da vila, famosa pelas massas caseiras com ragu de javali (<em>cinghiale</em>) e terraço panorâmico.</li>
+            <li><strong>Antica Macelleria Cecchini (Panzano, na beira da SR222):</strong> famoso açougue do Dario Cecchini; ótimo para conhecer a loja ou, se ajustarem o horário do almoço (13h), viver a experiência da <em>Officina della Bistecca</em>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Retorno -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <div class="section-label">Etapa 5 · Encerramento</div>
+            <h2 class="card-title">Retorno a Siena</h2>
+          </div>
+          <span class="card-time">16:30 · Cerca de 1h pela SR222</span>
+        </div>
+        <p>Desçam com calma de volta a Siena antes de escurecer totalmente, chegando ao hotel no fim da tarde com tempo para descansar antes do jantar.</p>
+      </article>
+
+    </div>
+
+    <!-- Dicas úteis -->
+    <section class="tips-section">
+      <h2>Dicas úteis para o trajeto</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>🚫 Atenção à ZTL</h3>
+          <p>Não entrem de carro nas muralhas de San Gimignano ou Castellina. Sigam sempre as placas azuis com a letra <strong>P</strong> para os estacionamentos externos.</p>
+        </div>
+        <div class="tip-card">
+          <h3>📸 Tempo para fotos</h3>
+          <p>Deixem uma pequena margem entre as paradas: na Toscana, um mirante inesperado na SR222 costuma render a melhor lembrança do dia.</p>
+        </div>
+        <div class="tip-card">
+          <h3>🛣️ Estradas rurais e clima</h3>
+          <p>Usem o GPS, mas dirijam sem pressa: as vias são cênicas e estreitas em alguns trechos. No inverno, os dias são mais curtos (pôr do sol por volta das 17h), então evitem atrasar a saída da manhã.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Chianti em 1 dia</strong> · torres, vinhos, vilas de pedra e colinas que ficam na memória. 🇮🇹
+  </footer>
+
+</body>
 </html>
